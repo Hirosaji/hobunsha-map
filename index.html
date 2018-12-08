@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <title>芳文社 聖地巡礼マップ「ドキドキ☆ビジュアルMAP」 - Hirosaji</title>
+    <meta content="芳文社 聖地巡礼マップ「ドキドキ☆ビジュアルMAP」 - Hirosaji" name="title">
+    <meta name="keywords" content="芳文社, 聖地巡礼, まんがタイムきらら, Leaflet.js, D3.js">
+    <meta name="description" content="「まんがタイムきらら」などのマンガ誌を発行している芳文社のアニメ化作品で登場した舞台をまとめた聖地巡礼マップ、題して「ドキドキ☆ビジュアルMAP」です。">
+
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="芳文社 聖地巡礼マップ「ドキドキ☆ビジュアルMAP」 - Hirosaji">
+    <meta property="og:description" content="「まんがタイムきらら」などのマンガ誌を発行している芳文社のアニメ化作品で登場した舞台をまとめた聖地巡礼マップ、題して「ドキドキ☆ビジュアルMAP」です。">
+    <meta property="og:site_name" content="hirosaji.github.io">
+    <meta property="og:url" content="https://hirosaji.github.io/hobunsha-map/index.html">
+    <meta property="og:locale" content="ja_JP" />
+    <meta property="og:image" content="https://hirosaji.github.io/hobunsha-map/img/OGimage.png" />
+    <meta property="fb:app_id" content="410089479323773" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@hirosaji" />
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet-src.js" crossorigin=""></script>
+
+    <script src="https://unpkg.com/geojson-vt@3.2.0/geojson-vt.js"></script>
+    <script src="js/canvasTile.js"></script>
+
+    <script src="js/bouncemarker.js"></script>
+
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <link rel='stylesheet' href='css/style.css' />
+</head>
+<body>
+
+<!-- wrapper -->
+<article class="wrapper">
+
+    <!-- 地図app -->
+    <section class="content">
+
+      <div id="map" class="map">
+        <div class="anime-detail-window">
+          <h3 class="anime-detail-window__title" id="anime_title"></h3>
+          <div class="anime-detail-window__wrap"></div>
+          <div class="button button--close anime-detail-window__button clickable">
+            <p class="button__body">
+              <i class="button__icon"></i>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 塗り分け切り替え -->
+      <div class="toggle-btn interval-year map-ui">
+        <p class="toggle-btn__title button__text map-ui__title">A: 塗り分け表示 / B: ピン表示</p>
+        <input class="toggle-btn__input" id="switchStyle" type="checkbox">
+        <label class="toggle-btn__label clickable" for="switchStyle">
+          <span class="toggle-btn__display__style">A</span>
+          <span class="toggle-btn__display__style">B</span>
+        </label>
+        <!-- <span id="intervalYearLabel">1</span>
+        <span>年ごとに比較</span> -->
+      </div>
+
+      <!-- 作品ラベル -->
+      <h3 class="anime-title map-ui" id="selected_anime_title"></h3>
+
+      <!-- 作品選択 -->
+      <div class="swip-button map-ui" id="swiperController">
+        <div class="swip-button__button swip-button__prev clickable" data-swip="prevSlide">
+          <p class="swip-button__text">PREV</p>
+        </div>
+        <div class="swip-button__button swip-button__next clickable" data-swip="nextSlide">
+          <p class="swip-button__text">NEXT</p>
+        </div>
+      </div>
+      <div class="swiper map-ui" id="swiper"></div>
+
+    </section>
+
+  </article>
+  <!-- end wrapper -->
+
+
+</body>
+<footer>
+    <script src="js/createSwiper.js"></script>
+    <script src="js/index.js"></script>
+    </footer>
+</html>
