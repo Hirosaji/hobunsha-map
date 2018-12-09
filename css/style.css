@@ -407,32 +407,39 @@ a.leaflet-control-zoom-in:hover,a.leaflet-control-zoom-out:hover{
 }
 .anime-detail-window{
     position:relative;
-    max-width:360px;
     padding:16px 16px 24px;
     background:#fff;
     box-shadow:0 2px 4px 0 rgba(0,0,0,.1);
     cursor:auto
 }
-@media(min-width:601px){
-    .anime-detail-window{
-        padding:24px;
-        border-radius:2px
-    }
-}
 .anime-detail-window__title{
     font-size:16px;
     font-size:1.6rem;
-    line-height:0.5;
+    line-height:1.5;
     border-bottom:1px dotted #ccc;
 }
 .anime-detail-window__button{
     position:absolute;
-    top:auto;
+    top: 0px;
     right:0;
-    bottom:-20px;
+    bottom: auto;
     left:auto;
     display:block;
     margin:0 16px 0 0;
+}
+@media(min-width:601px){
+    .anime-detail-window{
+        padding:24px;
+        max-width:360px;
+        border-radius:2px;
+    }
+    .anime-detail-window__title{
+        line-height:0.5;
+    }
+    .anime-detail-window__button{
+        top:auto;
+        bottom:-20px;
+    }
 }
 .button {
     display: -ms-flexbox;
@@ -643,6 +650,13 @@ a.leaflet-control-zoom-in:hover,a.leaflet-control-zoom-out:hover{
     transform-origin:bottom center;
     will-change:transform;
     transition:transform .2s ease
+}
+.__no-data {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    filter: grayscale(100%);
 }
 @media(min-width:375px){
     .swiper-slide{
@@ -1037,14 +1051,14 @@ a.leaflet-control-zoom-in:hover,a.leaflet-control-zoom-out:hover{
     right:0;
     bottom:auto;
     left:0;
-    margin:48px 0 0;
+    margin:0 0 0;
     transform:translateY(-300%);
     will-change:transform;
     transition:transform .2s ease-in-out
 }
 @media(min-width:601px){
     .anime-detail-window{
-        margin:16px 16px 16px
+        margin:16px 16px 16px;
     }
 }
 .anime-detail-window.__open{
