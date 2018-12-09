@@ -220,8 +220,12 @@
       var swiperController = d3.select("#swiperController");
       var selectedAnimeTitle = d3.select("#selected_anime_title");
 
+      // gather no-data title
+      var noDataTitle = Object.keys(JSON).filter(key => (key !== "全作品" && !(JSON[key][0].place)))
+
       var swiperData = Object.keys(JSON).map(function(target, i) {
-        return { index: i, title: target, thumb: JSON[target][0].thumb };
+        var noData = (noDataTitle.indexOf(target) > -1) ? true : false;
+        return { index: i, title: target, thumb: JSON[target][0].thumb, noData: noData};
       });
 
       swiper.datum(swiperData).call(createSwiper());
