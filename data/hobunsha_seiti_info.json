@@ -1,10 +1,4 @@
 {
-    "全作品": [
-        {
-            "title": "全作品",
-            "thumb": "hobunsha.jpg"
-        }
-    ],
     "ひだまりスケッチ": [
         {
             "title": "ひだまりスケッチ",
@@ -1633,6 +1627,12 @@
         {
             "title": "アニマエール！",
             "thumb": "anima_yell.jpg"
+        }
+    ],
+    "全作品": [
+        {
+            "title": "全作品",
+            "thumb": "hobunsha.jpg"
         }
     ]
 }

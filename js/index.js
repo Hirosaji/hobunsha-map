@@ -9,8 +9,8 @@
     .await(function(_, JSON, cityGeoJSON, prefGeoJSON, animeList) {
 
       var center = [36, 136];
-      var selectTitle = "全作品";
-      var selectMapStyle = "paint";
+      var selectTitle = "ひだまりスケッチ";
+      var selectMapStyle = "pin";
     
       /**********
         Map
@@ -125,20 +125,20 @@
       // switch paint style / pin style event
       switchStyleToggle.on("change", function() {
         var flag = this.checked;
-        // pin
+        // paint
         if (flag) {
+          selectMapStyle = "paint";
+
+          assetLayerGroup.clearLayers();
+          setLayer();
+        }
+        // pin
+        else {
           selectMapStyle = "pin";
           setMarkers();
 
           map.removeLayer(prevCityGrid);
           map.removeLayer(prevPrefGrid);
-        }
-        // paint
-        else {
-          selectMapStyle = "paint";
-
-          assetLayerGroup.clearLayers();
-          setLayer();
         }
       });
 
