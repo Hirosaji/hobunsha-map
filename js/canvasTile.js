@@ -44,8 +44,11 @@ function addCanvasTile(tileIndex, size, selectTitle) {
 
       if (selectTitle === "全作品") {
         var seitiBool = Object.values(tags.placeCount).some(value => value > 0);
+        var countSum = Object.values(tags.placeCount).reduce((prev, current) => prev + current);
+        var thisColor = setColor(countSum);
       } else {
         var seitiBool = tags.placeCount[selectTitle] > 0;
+        var thisColor = setColor(tags.placeCount[selectTitle]);
       };
 
       if (clickable) {
@@ -60,12 +63,12 @@ function addCanvasTile(tileIndex, size, selectTitle) {
       } else if(tileIndex.options.type === "city") {
         
         ctx.fillStyle = seitiBool
-          ? '#F12500'
+          ? thisColor
           : _fillStyle;
         if (tags._setLineDash)
           ctx.setLineDash(tags._setLineDash);
         ctx.strokeStyle = seitiBool
-          ? '#F12500'
+          ? thisColor
           : _storkeStyle;
         ctx.lineWidth = tags._lineWidth
           ? tags._lineWidth
@@ -74,7 +77,7 @@ function addCanvasTile(tileIndex, size, selectTitle) {
       } else if(tileIndex.options.type === "pref") {
 
         ctx.fillStyle = seitiBool
-          ? "rgba(235, 0, 0, 0.1)"
+          ? "rgba(235, 0, 0, 0.08)"
           : "rgba(0, 0, 0, 0)";
         ctx.strokeStyle = _storkeStyle;
         ctx.lineWidth = 0.15;
@@ -120,5 +123,14 @@ function addCanvasTile(tileIndex, size, selectTitle) {
     }, 10);
 
     return canvas;
+  }
+
+  function setColor(count) {
+    return count > 4 ? "#a50f15" :
+           count > 3  ? "#de2d26" :
+           count > 2  ? "#fb6a4a" :
+           count > 1  ? "#fc9272" :
+           count > 0  ? "#fcbba1" :
+                        "white";
   }
 }
