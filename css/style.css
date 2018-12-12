@@ -604,6 +604,11 @@ a.leaflet-control-zoom-in:hover,a.leaflet-control-zoom-out:hover{
         height:165px
     }
 }
+@media only screen and (min-device-width: 480px){
+    .swiper{
+        height:215px
+    }
+}
 .swiper-wrapper{
     display:-ms-flexbox;
     display:flex;
@@ -616,6 +621,11 @@ a.leaflet-control-zoom-in:hover,a.leaflet-control-zoom-out:hover{
         height:125px
     }
 }
+@media only screen and (min-device-width: 480px){
+    .swiper-wrapper{
+        height:215px
+    }
+}
 .swiper-blank{
     width:calc(50% - 45px);
     -ms-flex-negative:0;
@@ -623,7 +633,12 @@ a.leaflet-control-zoom-in:hover,a.leaflet-control-zoom-out:hover{
     background:#e6e6e6;
     border-right:1px solid #e6e6e6
 }
-@media(min-width:375px){
+@media(max-width:480px){
+    .swiper-blank{
+        width:calc(50% - 45px)
+    }
+}
+@media only screen and (min-device-width: 480px){
     .swiper-blank{
         width:calc(50% - 45px)
     }
@@ -662,6 +677,12 @@ a.leaflet-control-zoom-in:hover,a.leaflet-control-zoom-out:hover{
     .swiper-slide{
         width:auto;
         height:125px;
+    }
+}
+@media only screen and (min-device-width: 480px){
+    .swiper-slide{
+        width:auto;
+        height:175px;
     }
 }
 .swiper-slide-active{
