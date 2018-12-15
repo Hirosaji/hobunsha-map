@@ -670,6 +670,7 @@ a.leaflet-control-zoom-in:hover,a.leaflet-control-zoom-out:hover{
 }
 @media(min-width:375px){
     .swiper-slide-active{
+        z-index:10;
         transform:scale(1.3)
     }
 }
