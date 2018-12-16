@@ -1,0 +1,1352 @@
+@import "https://fonts.googleapis.com/css?family=Roboto+Condensed:400,500,700";
+
+@charset "UTF-8";
+
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+
+body {
+  margin: 0;
+}
+
+a {
+  background-color: transparent;
+  &:active, &:hover {
+    outline: 0;
+  }
+}
+
+b, strong {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+img {
+  border: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+* {
+  box-sizing: border-box;
+  &:before, &:after {
+    box-sizing: border-box;
+  }
+}
+
+html {
+  font-size: 62.5%;
+  font-family: sans-serif;
+  line-height: 1.15;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: Helvetica Neue,Source Han Sans,-apple-system,BlinkMacSystemFont,Original Yu Gothic,Yu Gothic,YuGothic,Verdana,Meiryo,"M+ 1p",sans-serif;
+  color: #333;
+  background-color: #fff;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.leaflet-pane, .leaflet-tile, .leaflet-marker-icon, .leaflet-marker-shadow, .leaflet-tile-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.leaflet-pane > {
+  svg, canvas {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+
+.leaflet-zoom-box, .leaflet-image-layer, .leaflet-layer {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.leaflet-container {
+  overflow: hidden;
+}
+
+.leaflet-tile, .leaflet-marker-icon, .leaflet-marker-shadow {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.leaflet-safari {
+  .leaflet-tile {
+    image-rendering: -webkit-optimize-contrast;
+  }
+  .leaflet-tile-container {
+    width: 1600px;
+    height: 1600px;
+    -webkit-transform-origin: 0 0;
+  }
+}
+
+.leaflet-marker-icon, .leaflet-marker-shadow {
+  display: block;
+}
+
+.leaflet-container {
+  .leaflet-overlay-pane svg, .leaflet-marker-pane img, .leaflet-shadow-pane img, .leaflet-tile-pane img, img.leaflet-image-layer {
+    max-width: none !important;
+    max-height: none !important;
+  }
+  &.leaflet-touch-zoom {
+    -ms-touch-action: pan-x pan-y;
+    touch-action: pan-x pan-y;
+  }
+  &.leaflet-touch-drag {
+    -ms-touch-action: pinch-zoom;
+    touch-action: none;
+    touch-action: pinch-zoom;
+    &.leaflet-touch-zoom {
+      -ms-touch-action: none;
+      touch-action: none;
+    }
+  }
+  -webkit-tap-highlight-color: transparent;
+  a {
+    -webkit-tap-highlight-color: rgba(51, 181, 229, 0.4);
+  }
+}
+
+.leaflet-tile {
+  -webkit-filter: inherit;
+  filter: inherit;
+  visibility: hidden;
+}
+
+.leaflet-tile-loaded {
+  visibility: inherit;
+}
+
+.leaflet-zoom-box {
+  width: 0;
+  height: 0;
+  box-sizing: border-box;
+  z-index: 800;
+}
+
+.leaflet-overlay-pane svg {
+  -moz-user-select: none;
+}
+
+.leaflet-pane {
+  z-index: 400;
+}
+
+.leaflet-tile-pane {
+  z-index: 200;
+}
+
+.leaflet-overlay-pane {
+  z-index: 400;
+}
+
+.leaflet-shadow-pane {
+  z-index: 500;
+}
+
+.leaflet-marker-pane {
+  z-index: 600;
+}
+
+.leaflet-tooltip-pane {
+  z-index: 650;
+}
+
+.leaflet-popup-pane {
+  z-index: 700;
+}
+
+.leaflet-map-pane {
+  canvas {
+    z-index: 100;
+  }
+  svg {
+    z-index: 200;
+  }
+}
+
+.leaflet-vml-shape {
+  width: 1px;
+  height: 1px;
+}
+
+.lvml {
+  behavior: url(#default#VML);
+  display: inline-block;
+  position: absolute;
+}
+
+.leaflet-control {
+  position: relative;
+  z-index: 800;
+  pointer-events: visiblePainted;
+  pointer-events: auto;
+}
+
+.leaflet-top, .leaflet-bottom {
+  position: absolute;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.leaflet-top {
+  top: 0;
+}
+
+.leaflet-right {
+  right: 0;
+}
+
+.leaflet-bottom {
+  bottom: 125px;
+}
+
+.leaflet-left {
+  left: 0;
+}
+
+.leaflet-control {
+  float: left;
+  clear: both;
+}
+
+.leaflet-right .leaflet-control {
+  float: right;
+}
+
+.leaflet-top .leaflet-control {
+  margin-top: 8px;
+}
+
+.leaflet-bottom .leaflet-control {
+  margin-bottom: 8px;
+}
+
+.leaflet-left .leaflet-control {
+  margin-left: 8px;
+}
+
+.leaflet-right .leaflet-control {
+  margin-right: 8px;
+}
+
+@media (min-width: 601px) {
+  .leaflet-top .leaflet-control {
+    margin-top: 16px;
+  }
+  .leaflet-bottom .leaflet-control {
+    margin-bottom: 16px;
+  }
+  .leaflet-left .leaflet-control {
+    margin-left: 16px;
+  }
+  .leaflet-right .leaflet-control {
+    margin-right: 16px;
+  }
+}
+
+.leaflet-fade-anim {
+  .leaflet-popup {
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    transition: opacity 0.2s linear;
+  }
+  .leaflet-map-pane .leaflet-popup {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  }
+}
+
+.leaflet-zoom-animated {
+  transform-origin: 0 0;
+}
+
+.leaflet-zoom-anim {
+  .leaflet-zoom-animated {
+    will-change: transform;
+    transition: transform 0.25s cubic-bezier(0, 0, 0.25, 1);
+  }
+  .leaflet-tile {
+    transition: none;
+  }
+}
+
+.leaflet-pan-anim .leaflet-tile {
+  transition: none;
+}
+
+.leaflet-zoom-anim .leaflet-zoom-hide {
+  visibility: hidden;
+}
+
+.leaflet-interactive {
+  cursor: pointer;
+}
+
+.leaflet-grab {
+  cursor: -webkit-grab;
+  cursor: -moz-grab;
+}
+
+.leaflet-crosshair {
+  cursor: crosshair;
+  .leaflet-interactive {
+    cursor: crosshair;
+  }
+}
+
+.leaflet-popup-pane, .leaflet-control {
+  cursor: auto;
+}
+
+.leaflet-dragging {
+  .leaflet-grab {
+    cursor: move;
+    cursor: -webkit-grabbing;
+    cursor: -moz-grabbing;
+    .leaflet-interactive {
+      cursor: move;
+      cursor: -webkit-grabbing;
+      cursor: -moz-grabbing;
+    }
+  }
+  .leaflet-marker-draggable {
+    cursor: move;
+    cursor: -webkit-grabbing;
+    cursor: -moz-grabbing;
+  }
+}
+
+.leaflet-marker-icon, .leaflet-marker-shadow, .leaflet-image-layer, .leaflet-pane > svg path, .leaflet-tile-container {
+  pointer-events: none;
+}
+
+.leaflet-marker-icon.leaflet-interactive, .leaflet-image-layer.leaflet-interactive, .leaflet-pane > svg path.leaflet-interactive {
+  pointer-events: visiblePainted;
+  pointer-events: auto;
+}
+
+a {
+  &.leaflet-control-zoom-in, &.leaflet-control-zoom-out {
+    position: relative;
+    display: block;
+    width: 32px;
+    height: 32px;
+    background: #fff;
+    font-size: 0;
+    color: #02081d;
+  }
+  &.leaflet-control-zoom-in {
+    &:visited, &:focus {
+      color: #02081d;
+    }
+  }
+  &.leaflet-control-zoom-out {
+    &:visited, &:focus {
+      color: #02081d;
+    }
+  }
+  &.leaflet-control-zoom-in:hover, &.leaflet-control-zoom-out:hover {
+    background: #f2f2f2;
+  }
+}
+
+.leaflet-control-zoom {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.leaflet-control-zoom-in {
+  border-radius: 2px 2px 0 0;
+  &:before, &:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background: #02081d;
+  }
+  &:before {
+    content: '';
+    display: block;
+    width: 3px;
+    height: 13px;
+  }
+  &:after {
+    content: '';
+    display: block;
+    width: 13px;
+    height: 3px;
+  }
+}
+
+.leaflet-control-zoom-out {
+  border-radius: 0 0 2px 2px;
+  &:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: auto;
+    left: 0;
+    content: '';
+    display: block;
+    width: 20px;
+    height: 1px;
+    margin: auto;
+    background: #e6e6e6;
+  }
+  &:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background: #02081d;
+    content: '';
+    display: block;
+    width: 13px;
+    height: 3px;
+  }
+}
+
+.leaflet-touch {
+  .leaflet-control-zoom-in, .leaflet-control-zoom-out {
+    font-size: 0;
+  }
+}
+
+.leaflet-default-icon-path {
+  background-image: url(images/marker-icon.png);
+}
+
+.leaflet-container .leaflet-control-attribution {
+  background: #fff;
+  background: rgba(255, 255, 255, 0.7);
+  margin: 0;
+  display: none;
+}
+
+.leaflet-control-zoom {
+  display: none;
+}
+
+@media (min-width: 601px) and (min-height: 480px) {
+  .leaflet-control-zoom {
+    display: block;
+  }
+}
+
+.card {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  width: 100%;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #ccc;
+}
+
+.card__image {
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: 128px;
+  margin-right: 8px;
+}
+
+.card__info {
+  position: relative;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+}
+
+.card__title {
+  width: calc(100% - 16px);
+  margin-left: 0;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+.card__date {
+  width: 100%;
+  margin: 8px 0 0;
+  font-size: 12px;
+  font-size: 1.2rem;
+  text-align: left;
+  color: #999;
+  line-height: 1;
+}
+
+.card__link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+}
+
+.card {
+  &.__touchstart .card__title {
+    text-decoration: underline;
+  }
+  &:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: auto;
+    margin: auto 4px auto auto;
+    content: '';
+    display: block;
+    width: 8px;
+    height: 8px;
+    transform: rotate(45deg);
+  }
+}
+
+@media (min-width: 601px) {
+  .card__image {
+    width: 100%;
+    margin: 0 0 8px;
+  }
+}
+
+.anime-detail-window {
+  position: relative;
+  padding: 16px 16px 24px;
+  background: #fff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  cursor: auto;
+}
+
+.anime-detail-window__title {
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  border-bottom: 1px dotted #ccc;
+}
+
+.anime-detail-window__button {
+  position: absolute;
+  top: 0px;
+  right: 0;
+  bottom: auto;
+  left: auto;
+  display: block;
+  margin: 0 16px 0 0;
+}
+
+@media (min-width: 601px) {
+  .anime-detail-window {
+    padding: 24px;
+    max-width: 360px;
+    border-radius: 2px;
+  }
+  .anime-detail-window__title {
+    line-height: 0.5;
+  }
+  .anime-detail-window__button {
+    top: auto;
+    bottom: -20px;
+  }
+}
+
+.button {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.button--close {
+  .button__body {
+    background: none;
+  }
+  .button__icon {
+    position: relative;
+  }
+}
+
+.button__body {
+  width: 40px;
+  height: 40px;
+  background: #1a1f2b;
+  border: 1px solid #1a1f2b;
+  border-radius: 100%;
+  color: #fff;
+  transition: all .2s ease;
+}
+
+.button__icon {
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-size: 24px;
+  font-size: 2.4rem;
+  font-family: Roboto Condensed,sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  text-align: center;
+}
+
+@media (min-width: 601px) {
+  .anime-detail-window__title {
+    font-size: 20px;
+    font-size: 2.0rem;
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+  }
+  .anime-detail-window__button {
+    top: 0;
+    right: 0;
+    bottom: auto;
+    margin: 4px 15px 0px 0;
+  }
+}
+
+.anime-detail-window__title {
+  span {
+    margin: 0 1em 0 0;
+  }
+  &:before {
+    content: '';
+    display: block;
+    width: 3em;
+    height: 4px;
+    position: absolute;
+    top: 0;
+    background: #02081d;
+  }
+}
+
+.anime-detail-window__wrap {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+
+.anime-detail-window__img {
+  width: 100%;
+  height: auto;
+}
+
+.button--close {
+  .button__body {
+    background: none;
+  }
+  .button__icon {
+    position: relative;
+    &:before, &:after {
+      content: '';
+      display: block;
+      width: 2px;
+      height: 18px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      background: #02081d;
+    }
+    &:before {
+      transform: rotate(45deg);
+    }
+    &:after {
+      transform: rotate(-45deg);
+    }
+  }
+  &.__touchstart {
+    .button__body {
+      background: #02081d;
+    }
+    .button__icon {
+      &:before, &:after {
+        background: #fff;
+      }
+    }
+  }
+}
+
+.button--big {
+  width: 100%;
+  padding: 24px 0;
+  background: #02081d;
+  color: #fff;
+  border: none;
+  border-radius: 48px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-size: 16px;
+  font-size: 1.6rem;
+  letter-spacing: .1em;
+  transition: background 0.2s ease;
+  &.__touchstart {
+    background: #e0402b;
+  }
+}
+
+@media (min-width: 601px) {
+  .button--big {
+    padding: 32px 0;
+  }
+}
+
+.__fullWidth {
+  margin: 0 auto 9em !important;
+  width: 100% !important;
+  max-width: none !important;
+}
+
+#map canvas {
+  width: 256px;
+  height: 256px;
+  cursor: pointer;
+}
+
+.map {
+  background: #f2f2f2;
+}
+
+.leaflet-tile-container canvas {
+  pointer-events: auto;
+}
+
+.swiper {
+  overflow-y: hidden;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  background: #fff;
+  height: 56px;
+  background: none;
+}
+
+@media (min-width: 375px) {
+  .swiper {
+    height: 165px;
+  }
+}
+
+.swiper-wrapper {
+  display: -ms-flexbox;
+  display: flex;
+  height: 48px;
+  margin-top: 40px;
+  background: #fff;
+}
+
+@media (min-width: 375px) {
+  .swiper-wrapper {
+    height: 125px;
+  }
+}
+
+.swiper-blank {
+  width: calc(50% - 45px);
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  background: #e6e6e6;
+  border-right: 1px solid #e6e6e6;
+}
+
+@media (min-width: 375px) {
+  .swiper-blank {
+    width: calc(50% - 45px);
+  }
+}
+
+.swiper-slide {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  text-align: center;
+  font-family: Roboto Condensed,sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  background: #fff;
+  cursor: pointer;
+  z-index: 1;
+  transform: scale(1);
+  transform-origin: bottom center;
+  will-change: transform;
+  transition: transform 0.2s ease;
+}
+
+.__no-data {
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+@media (min-width: 375px) {
+  .swiper-slide {
+    width: auto;
+    height: 125px;
+  }
+}
+
+.swiper-slide-active {
+  z-index: 10;
+  transform: scale(1.16666);
+}
+
+@media (min-width: 375px) {
+  .swiper-slide-active {
+    z-index: 10;
+    transform: scale(1.3);
+  }
+}
+
+.slide-disable {
+  pointer-events: none;
+  color: #fff;
+  background-color: #e6e6e6;
+}
+
+.swip-button {
+  width: 100%;
+  height: 175px;
+  pointer-events: none;
+}
+
+@media (min-width: 375px) {
+  .swip-button {
+    height: 64px;
+  }
+}
+
+@media (min-width: 601px) {
+  .swip-button {
+    height: 40px;
+  }
+}
+
+.swip-button__button {
+  position: absolute;
+  pointer-events: all;
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  &:before {
+    content: '';
+    display: block;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    transform: rotate(45deg);
+  }
+}
+
+@media (min-width: 375px) {
+  .swip-button__button {
+    width: 64px;
+    height: 64px;
+  }
+}
+
+@media (min-width: 601px) {
+  .swip-button__button {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    width: auto;
+    height: 40px;
+    padding: 12px 0px;
+    border-radius: 2px;
+    background: none;
+    transition: background 0.2s ease;
+    &:before {
+      position: relative;
+      margin: 0;
+    }
+    &:after {
+      content: '';
+      display: block;
+      width: 12px;
+      height: 12px;
+      margin: 0;
+      transform: rotate(45deg);
+    }
+    &:hover {
+      background: rgba(255, 255, 255, 0.9);
+    }
+  }
+}
+
+.swip-button__text {
+  display: none;
+  font-size: 12px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-shadow: 0.5px 0.5px rgba(255, 255, 255, 0.5), (-0.5px) 0.5px rgba(255, 255, 255, 0.5), 0.5px -0.5px rgba(255, 255, 255, 0.5), (-0.5px) -0.5px rgba(255, 255, 255, 0.5);
+}
+
+@media (min-width: 601px) {
+  .swip-button__text {
+    display: block;
+  }
+}
+
+.swip-button__prev {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: auto;
+  &:before {
+    border-left: 2px solid #02081d;
+    border-bottom: 2px solid #02081d;
+  }
+}
+
+@media (min-width: 601px) {
+  .swip-button__prev {
+    -ms-flex-flow: row-reverse;
+    flex-flow: row-reverse;
+    &:before {
+      -ms-flex-order: 1;
+      order: 1;
+    }
+    &:after {
+      -ms-flex-order: 2;
+      order: 2;
+      border-left: 2px solid #02081d;
+      border-bottom: 2px solid #02081d;
+    }
+    .swip-button__text {
+      -ms-flex-order: 3;
+      order: 3;
+      margin-right: 8px;
+    }
+  }
+}
+
+.swip-button__next {
+  top: 0;
+  left: auto;
+  bottom: 0;
+  right: 0;
+  &:before {
+    border-top: 2px solid #02081d;
+    border-right: 2px solid #02081d;
+  }
+}
+
+@media (min-width: 601px) {
+  .swip-button__next {
+    &:before {
+      -ms-flex-order: 1;
+      order: 1;
+    }
+    &:after {
+      -ms-flex-order: 2;
+      order: 2;
+      border-top: 2px solid #02081d;
+      border-right: 2px solid #02081d;
+    }
+    .swip-button__text {
+      -ms-flex-order: 3;
+      order: 3;
+      margin-left: 8px;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .toggle-btn__title {
+    display: none;
+  }
+}
+
+.toggle-btn__title {
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.toggle-btn__label {
+  outline: 0;
+  display: block;
+  width: 72px;
+  height: 40px;
+  padding: 3px;
+  margin: 0 0 0 auto;
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 20px;
+  position: relative;
+  font-size: 1.5rem;
+  transition: border 0.2s ease;
+}
+
+.toggle-btn__display__style {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 38px;
+  height: 38px;
+  line-height: 38px;
+  text-align: center;
+  font-family: Roboto Condensed,sans-serif;
+  font-weight: 700;
+  color: #ccc;
+  z-index: 1002;
+  &:nth-of-type(2) {
+    left: auto;
+    right: 0;
+  }
+}
+
+.toggle-btn__label.__touchstart {
+  border: 1px solid #02081d;
+}
+
+.toggle-btn__input {
+  display: none;
+  + .toggle-btn__label {
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    transition: all 0.25s ease;
+    .toggle-btn__display__style:first-child {
+      color: #fff;
+    }
+    &:after {
+      position: relative;
+      display: block;
+      content: "";
+      width: 32px;
+      height: 32px;
+      background: #02081d;
+      border-radius: 100%;
+      left: 0;
+      transition: all 0.25s ease;
+    }
+  }
+  &:checked + .toggle-btn__label {
+    .toggle-btn__display__style {
+      &:first-child {
+        color: #ccc;
+      }
+      &:last-child {
+        color: #fff;
+      }
+    }
+    &:after {
+      left: 50%;
+    }
+  }
+}
+
+.anime-title {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 4px;
+  background: #fff;
+  font-size: 12px;
+  font-size: 1.2rem;
+  text-align: center;
+  line-height: 1;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  &:after {
+    position: absolute;
+    top: auto;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin: auto auto -5px;
+    background: #fff;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
+    transform: rotate(45deg);
+  }
+}
+
+@media (min-width: 375px) {
+  .anime-title {
+    padding: 12px 16px;
+    font-size: 16px;
+    font-size: 1.6rem;
+  }
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.map {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.map-ui {
+  position: absolute;
+  top: 48px;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  margin: 8px;
+}
+
+@media (min-width: 375px) {
+  .map-ui {
+    margin: 16px;
+  }
+}
+
+.button--related {
+  top: 48px;
+  right: 0;
+  bottom: auto;
+  left: auto;
+}
+
+.button--info {
+  top: 48px;
+  right: auto;
+  bottom: auto;
+  left: 0;
+}
+
+.button--share {
+  top: auto;
+  right: 0;
+  bottom: 0;
+  left: auto;
+  margin-bottom: 125px;
+}
+
+.button--info .button__body {
+  background: none;
+}
+
+@media (min-width: 375px) {
+  .button--share {
+    margin-bottom: 157px;
+  }
+}
+
+@media (min-width: 601px) {
+  .button--info {
+    top: 48px;
+    right: 0;
+    bottom: auto;
+    left: auto;
+    margin: 72px 16px 0 0;
+  }
+  .button--share {
+    top: 48px;
+    right: 0;
+    bottom: auto;
+    left: auto;
+    margin: 128px 16px 0 0;
+  }
+}
+
+.toggle-btn {
+  top: auto;
+  right: 0;
+  bottom: 124px;
+  left: auto;
+}
+
+.swip-button, .swiper {
+  top: auto;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+}
+
+@media (min-width: 601px) {
+  .swip-button {
+    bottom: 175px;
+    width: 430px;
+    margin: auto;
+  }
+}
+
+.anime-title {
+  top: auto;
+  right: 50%;
+  bottom: 64px;
+  left: auto;
+  margin: auto;
+  margin-bottom: 8px;
+  transform: translateX(50%);
+}
+
+@media (min-width: 375px) {
+  .anime-title {
+    margin-bottom: 115px;
+  }
+}
+
+.anime-detail-window {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: auto;
+  left: 0;
+  margin: 0 0 0;
+  transform: translateY(-300%);
+  will-change: transform;
+  transition: transform 0.2s ease-in-out;
+  &.__open {
+    transform: translateY(0);
+  }
+}
+
+@media (min-width: 601px) {
+  .anime-detail-window {
+    margin: 16px 16px 16px;
+  }
+}
+
+.related {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: auto;
+  width: 100%;
+  max-width: 424px;
+  height: 100%;
+  transform: translateX(100%);
+  transition: transform .2s ease-in-out;
+  will-change: transform;
+  &.__open {
+    transform: translateX(0);
+  }
+}
+
+.leaflet-pane {
+  z-index: 400;
+}
+
+.leaflet-tile-pane {
+  z-index: 200;
+}
+
+.leaflet-overlay-pane {
+  z-index: 400;
+}
+
+.leaflet-shadow-pane {
+  z-index: 500;
+}
+
+.leaflet-marker-pane {
+  z-index: 600;
+}
+
+.leaflet-tooltip-pane {
+  z-index: 650;
+}
+
+.leaflet-popup-pane {
+  z-index: 700;
+}
+
+.leaflet-map-pane {
+  canvas {
+    z-index: 100;
+  }
+  svg {
+    z-index: 200;
+  }
+}
+
+.map-ui {
+  z-index: 1000;
+}
+
+.swip-button {
+  z-index: 1001;
+}
+
+.related {
+  z-index: 1002;
+}
+
+.button--related {
+  z-index: 1003;
+}
+
+.anime-detail-window {
+  z-index: 1004;
+}
+
+@media (min-width: 601px) {
+  .related {
+    z-index: 1003;
+  }
+  .button--related {
+    z-index: 1004;
+  }
+  .anime-detail-window {
+    z-index: 1002;
+  }
+}
