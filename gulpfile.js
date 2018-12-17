@@ -4,9 +4,10 @@ const gulp = require('gulp');
 const sass = require('gulp-sass');
 
 const browserSync = require('browser-sync');
+const reload = browserSync.reload;
 
 // style.scssの監視タスクを作成する
-gulp.task('scss', function () {
+gulp.task('server', function () {
     browserSync({
         notify: false,
         server: {
@@ -26,6 +27,6 @@ gulp.task('scss', function () {
         .on('error', sass.logError))
         // cssフォルダー以下に保存
         .pipe(gulp.dest('./public/css'));
-    });
+    }).on("change", reload);
   });
   

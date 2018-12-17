@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "gulp scss"
+    "server": "gulp server"
   },
   "repository": {
     "type": "git",
@@ -28,7 +28,6 @@
     "gulp-sass": "^4.0.2"
   },
   "dependencies": {
-    "browser-sync": "^2.26.3",
-    "gulp-exec": "^3.0.2"
+    "browser-sync": "^2.26.3"
   }
 }
