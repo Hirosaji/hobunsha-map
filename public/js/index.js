@@ -8,7 +8,7 @@
     .defer(d3.tsv, 'data/hobunsya_anime.tsv')
     .await(function(_, JSON, cityGeoJSON, prefGeoJSON, animeList) {
 
-      var center = [36, 136];
+      var center = [36, 137.6];
       var selectTitle = "ひだまりスケッチ";
       var selectMapStyle = "pin";
     
