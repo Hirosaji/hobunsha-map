@@ -6,7 +6,17 @@
 
 body {
   margin: 0;
+  color: #333;
+  font-family: Helvetica Neue,Source Han Sans,-apple-system,BlinkMacSystemFont,Original Yu Gothic,Yu Gothic,YuGothic,Verdana,Meiryo,"M+ 1p",sans-serif;
+  background-color: #fff;
+  overflow: hidden;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+
+  /* hack to engage viewport-units-buggyfill */
+  content: 'viewport-units-buggyfill; height: 100vh; height: calc(var(--vh, 1vh) * 100);';
 }
+
 
 a {
   background-color: transparent;
@@ -45,14 +55,6 @@ html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-}
-
-body {
-  font-family: Helvetica Neue,Source Han Sans,-apple-system,BlinkMacSystemFont,Original Yu Gothic,Yu Gothic,YuGothic,Verdana,Meiryo,"M+ 1p",sans-serif;
-  color: #333;
-  background-color: #fff;
-  height: 100vh;
-  overflow: hidden;
 }
 
 .leaflet-pane, .leaflet-tile, .leaflet-marker-icon, .leaflet-marker-shadow, .leaflet-tile-container {
