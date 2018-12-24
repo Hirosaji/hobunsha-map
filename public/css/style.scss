@@ -6,6 +6,11 @@
 
 body {
   margin: 0;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+
+  /* hack to engage viewport-units-buggyfill */
+  content: 'viewport-units-buggyfill; height: 100vh; height: calc(var(--vh, 1vh) * 100);';
 }
 
 a {
@@ -26,14 +31,6 @@ h1 {
 
 img {
   border: 0;
-}
-
-.body {
-  height: 100vh;
-  height: calc(var(--vh, 1vh) * 100);
-
-  /* hack to engage viewport-units-buggyfill */
-  content: 'viewport-units-buggyfill; height: 100vh; height: calc(var(--vh, 1vh) * 100);';
 }
 
 svg:not(:root) {
