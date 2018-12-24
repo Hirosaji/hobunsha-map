@@ -1137,7 +1137,8 @@ a.leaflet-control-zoom-in:hover, a.leaflet-control-zoom-out:hover {
 .content {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
 }
 
 .map {
