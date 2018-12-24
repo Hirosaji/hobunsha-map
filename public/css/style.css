@@ -1139,6 +1139,8 @@ a.leaflet-control-zoom-in:hover, a.leaflet-control-zoom-out:hover {
   width: 100%;
   height: 100vh;
   height: calc(var(--vh, 1vh) * 100);
+  /* hack to engage viewport-units-buggyfill */
+  content: 'viewport-units-buggyfill; height: 100vh; height: calc(var(--vh, 1vh) * 100);';
 }
 
 .map {
