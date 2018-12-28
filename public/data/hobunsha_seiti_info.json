@@ -1552,13 +1552,6 @@
         },
         {
             "title": "NEW GAME!",
-            "lat": "35.707593",
-            "lng": "139.6660992",
-            "place": "居酒屋（(株)陸蒸気）",
-            "thumb": "newgame_01.jpg"
-        },
-        {
-            "title": "NEW GAME!",
             "lat": "35.6900527",
             "lng": "139.7058025",
             "place": "新宿バルト9",
@@ -1576,6 +1569,153 @@
             "lat": "35.6472525",
             "lng": "140.033594",
             "place": "幕張メッセ 国際展示場1-8ホール",
+            "thumb": "newgame_01.jpg"
+        },
+        {
+            "title": "NEW GAME!",
+            "lat": "35.6897063",
+            "lng": "139.6974291",
+            "place": "ヨドバシカメラ 新宿西口本店",
+            "thumb": "newgame_01.jpg"
+        },
+        {
+            "title": "NEW GAME!",
+            "lat": "35.6590548",
+            "lng": "139.7005662",
+            "place": "ハチ公前",
+            "thumb": "newgame_01.jpg"
+        },
+        {
+            "title": "NEW GAME!",
+            "lat": "35.6557392",
+            "lng": "139.7004288",
+            "place": "ジョナサン・渋谷桜丘店",
+            "thumb": "newgame_01.jpg"
+        },
+        {
+            "title": "NEW GAME!",
+            "lat": "35.6595584",
+            "lng": "139.7008932",
+            "place": "渋谷駅周辺",
+            "thumb": "newgame_01.jpg"
+        },
+        {
+            "title": "NEW GAME!",
+            "lat": "35.6725785",
+            "lng": "139.5340531",
+            "place": "榛沢橋",
+            "thumb": "newgame_01.jpg"
+        },
+        {
+            "title": "NEW GAME!",
+            "lat": "35.6739055",
+            "lng": "139.5327669",
+            "place": "野川沿道",
+            "thumb": "newgame_01.jpg"
+        },
+        {
+            "title": "NEW GAME!",
+            "lat": "35.6995425",
+            "lng": "139.6377754",
+            "place": "南阿佐谷すずらん通り商店街",
+            "thumb": "newgame_01.jpg"
+        },
+        {
+            "title": "NEW GAME!",
+            "lat": "35.7023765",
+            "lng": "139.6363684",
+            "place": "JAZZ CAFE MISTY",
+            "thumb": "newgame_01.jpg"
+        },
+        {
+            "title": "NEW GAME!",
+            "lat": "35.7038452",
+            "lng": "139.6369032",
+            "place": "築地日本海阿佐ヶ谷店",
+            "thumb": "newgame_01.jpg"
+        },
+        {
+            "title": "NEW GAME!",
+            "lat": "35.7055762",
+            "lng": "139.6483116",
+            "place": "Bar 私",
+            "thumb": "newgame_01.jpg"
+        },
+        {
+            "title": "NEW GAME!",
+            "lat": "35.7039902",
+            "lng": "139.6363933",
+            "place": "プラウド阿佐ヶ谷",
+            "thumb": "newgame_01.jpg"
+        },
+        {
+            "title": "NEW GAME!",
+            "lat": "35.702833526060665",
+            "lng": "139.6360178",
+            "place": "細田工務店 杉並リボン館",
+            "thumb": "newgame_01.jpg"
+        },
+        {
+            "title": "NEW GAME!",
+            "lat": "35.702833526060665",
+            "lng": "139.6360178",
+            "place": "市川龍清堂",
+            "thumb": "newgame_01.jpg"
+        },
+        {
+            "title": "NEW GAME!",
+            "lat": "35.702833526060665",
+            "lng": "139.6360178",
+            "place": "リサイクルブティックABC阿佐谷南店",
+            "thumb": "newgame_01.jpg"
+        },
+        {
+            "title": "NEW GAME!",
+            "lat": "35.702833526060665",
+            "lng": "139.6360178",
+            "place": "タナカ産業",
+            "thumb": "newgame_01.jpg"
+        },
+        {
+            "title": "NEW GAME!",
+            "lat": "35.7054067",
+            "lng": "139.6658254",
+            "place": "中野駅",
+            "thumb": "newgame_01.jpg"
+        },
+        {
+            "title": "NEW GAME!",
+            "lat": "35.672374",
+            "lng": "139.534219",
+            "place": "榛沢橋付近",
+            "thumb": "newgame_01.jpg"
+        },
+        {
+            "title": "NEW GAME!",
+            "lat": "35.7019349",
+            "lng": "139.6359573",
+            "place": "らーめん番長 阿佐ヶ谷店",
+            "thumb": "newgame_01.jpg"
+        },
+        {
+            "title": "NEW GAME!",
+            "lat": "35.702121",
+            "lng": "139.6359073",
+            "place": "村 阿佐ヶ谷店",
+            "thumb": "newgame_01.jpg"
+        },
+        {
+            "title": "NEW GAME!",
+            "lat": "35.7025279",
+            "lng": "139.6361233",
+            "place": "ファミリーマート阿佐谷南三丁目店",
+            "thumb": "newgame_01.jpg"
+        },
+        {
+            "title": "NEW GAME!",
+            "lat": "35.7019321",
+            "lng": "139.6362601",
+            "place": "阿佐谷南１丁目周辺",
             "thumb": "newgame_01.jpg"
         }
     ],
