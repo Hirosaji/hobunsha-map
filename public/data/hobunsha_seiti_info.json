@@ -1561,7 +1561,7 @@
             "title": "NEW GAME!",
             "lat": "35.7051183",
             "lng": "139.6359242",
-            "place": "銀座コージーコーナー 阿佐ヶ谷店",
+            "place": "クリスピークリームドーナツディラ 阿佐ヶ谷店",
             "thumb": "newgame_01.jpg"
         },
         {
@@ -1590,13 +1590,6 @@
             "lat": "35.6557392",
             "lng": "139.7004288",
             "place": "ジョナサン・渋谷桜丘店",
-            "thumb": "newgame_01.jpg"
-        },
-        {
-            "title": "NEW GAME!",
-            "lat": "35.6595584",
-            "lng": "139.7008932",
-            "place": "渋谷駅周辺",
             "thumb": "newgame_01.jpg"
         },
         {
@@ -1699,6 +1692,27 @@
         },
         {
             "title": "NEW GAME!",
+            "lat": "35.6690355",
+            "lng": "139.6131128",
+            "place": "hair salon Covo前",
+            "thumb": "newgame_01.jpg"
+        },
+        {
+            "title": "NEW GAME!",
+            "lat": "35.702122",
+            "lng": "139.63591",
+            "place": "MORITA BUILDING 2前",
+            "thumb": "newgame_01.jpg"
+        },
+        {
+            "title": "NEW GAME!",
+            "lat": "35.6987263",
+            "lng": "139.6376225",
+            "place": "阿佐谷モト・ルーム前",
+            "thumb": "newgame_01.jpg"
+        },
+        {
+            "title": "NEW GAME!",
             "lat": "35.702121",
             "lng": "139.6359073",
             "place": "村 阿佐ヶ谷店",
@@ -1713,9 +1727,142 @@
         },
         {
             "title": "NEW GAME!",
+            "lat": "35.4659843",
+            "lng": "139.6171541",
+            "place": "SPA EAS",
+            "thumb": "newgame_01.jpg"
+        },
+        {
+            "title": "NEW GAME!",
             "lat": "35.7019321",
             "lng": "139.6362601",
-            "place": "阿佐谷南１丁目周辺",
+            "place": "ヨドバシカメラ マルチメディアAkiba",
+            "thumb": "newgame_01.jpg"
+        },
+        {
+            "title": "NEW GAME!",
+            "lat": "35.7004459",
+            "lng": "139.6359268",
+            "place": "ローソン 杉並区役所前店",
+            "thumb": "newgame_01.jpg"
+        },
+        {
+            "title": "NEW GAME!",
+            "lat": "35.7047926",
+            "lng": "139.6368606",
+            "place": "ランドエイトビル前",
+            "thumb": "newgame_01.jpg"
+        },
+        {
+            "title": "NEW GAME!",
+            "lat": "35.6987936",
+            "lng": "139.6378712",
+            "place": "つけ麺めん屋桔梗 南阿佐谷店",
+            "thumb": "newgame_01.jpg"
+        },
+        {
+            "title": "NEW GAME!",
+            "lat": "35.6657706",
+            "lng": "139.7739453",
+            "place": "報道健保築地健診プラザ",
+            "thumb": "newgame_01.jpg"
+        },
+        {
+            "title": "NEW GAME!",
+            "lat": "35.6665699",
+            "lng": "139.7743713",
+            "place": "パークホームズ築地グリーンサイド",
+            "thumb": "newgame_01.jpg"
+        },
+        {
+            "title": "NEW GAME!",
+            "lat": "35.6944035",
+            "lng": "139.4454577",
+            "place": "一橋大学",
+            "thumb": "newgame_01.jpg"
+        },
+        {
+            "title": "NEW GAME!",
+            "lat": "35.704751",
+            "lng": "139.618339",
+            "place": "東京荻窪天然温泉 なごみの湯",
+            "thumb": "newgame_01.jpg"
+        },
+        {
+            "title": "NEW GAME!",
+            "lat": "35.7082711",
+            "lng": "139.6496874",
+            "place": "フロレスタ高円寺店",
+            "thumb": "newgame_01.jpg"
+        },
+        {
+            "title": "NEW GAME!",
+            "lat": "35.7050137",
+            "lng": "139.6363245",
+            "place": "NEWDAYS Dila 阿佐ヶ谷店",
+            "thumb": "newgame_01.jpg"
+        },
+        {
+            "title": "NEW GAME!",
+            "lat": "35.6948756",
+            "lng": "139.4453856",
+            "place": "どらっぐぱぱす 新江古田駅前店",
+            "thumb": "newgame_01.jpg"
+        },
+        {
+            "title": "NEW GAME!",
+            "lat": "43.959721",
+            "lng": "143.532556",
+            "place": "生野駅",
+            "thumb": "newgame_01.jpg"
+        },
+        {
+            "title": "NEW GAME!",
+            "lat": "35.6917911",
+            "lng": "139.7010119",
+            "place": "新宿駅東口",
+            "thumb": "newgame_01.jpg"
+        },
+        {
+            "title": "NEW GAME!",
+            "lat": "35.6940549",
+            "lng": "139.7014356",
+            "place": "珈琲茶館集 新宿店",
+            "thumb": "newgame_01.jpg"
+        },
+        {
+            "title": "NEW GAME!",
+            "lat": "35.6917911",
+            "lng": "139.7010119",
+            "place": "サンシャイン クルーズ・クルーズ",
+            "thumb": "newgame_01.jpg"
+        },
+        {
+            "title": "NEW GAME!",
+            "lat": "35.6917911",
+            "lng": "139.7010119",
+            "place": "サンシャインシティ アルパ",
+            "thumb": "newgame_01.jpg"
+        },
+        {
+            "title": "NEW GAME!",
+            "lat": "42.841152",
+            "lng": "140.6223693",
+            "place": "ニセコグランドホテル",
+            "thumb": "newgame_01.jpg"
+        },
+        {
+            "title": "NEW GAME!",
+            "lat": "42.902208",
+            "lng": "140.752225",
+            "place": "大衆居酒屋マルキュー商店",
+            "thumb": "newgame_01.jpg"
+        },
+        {
+            "title": "NEW GAME!",
+            "lat": "42.8780002",
+            "lng": "140.6756672",
+            "place": "ニセコ花園第２クワッド",
             "thumb": "newgame_01.jpg"
         }
     ],
@@ -1734,6 +1881,142 @@
     "NEW GAME!!": [
         {
             "title": "NEW GAME!!",
+            "lat": "35.6917911",
+            "lng": "139.7010119",
+            "place": "新宿駅東口",
+            "thumb": "newgame_02.jpg"
+        },
+        {
+            "title": "NEW GAME!!",
+            "lat": "35.6534638",
+            "lng": "139.5623718",
+            "place": "馬橋",
+            "thumb": "newgame_02.jpg"
+        },
+        {
+            "title": "NEW GAME!!",
+            "lat": "35.6590442",
+            "lng": "139.7008593",
+            "place": "渋谷駅ハチ公口側",
+            "thumb": "newgame_02.jpg"
+        },
+        {
+            "title": "NEW GAME!!",
+            "lat": "35.65928",
+            "lng": "139.699871",
+            "place": "ガスト 渋谷駅前店",
+            "thumb": "newgame_02.jpg"
+        },
+        {
+            "title": "NEW GAME!!",
+            "lat": "35.697835",
+            "lng": "139.655789",
+            "place": "蚕糸の森公園",
+            "thumb": "newgame_02.jpg"
+        },
+        {
+            "title": "NEW GAME!!",
+            "lat": "35.704696",
+            "lng": "139.6362975",
+            "place": "JR阿佐ヶ谷駅南口",
+            "thumb": "newgame_02.jpg"
+        },
+        {
+            "title": "NEW GAME!!",
+            "lat": "35.704872",
+            "lng": "139.635859",
+            "place": "JR阿佐ヶ谷駅",
+            "thumb": "newgame_02.jpg"
+        },
+        {
+            "title": "NEW GAME!!",
+            "lat": "35.6595584",
+            "lng": "139.7008932",
+            "place": "渋谷駅周辺",
+            "thumb": "newgame_02.jpg"
+        },
+        {
+            "title": "NEW GAME!!",
+            "lat": "35.6995425",
+            "lng": "139.6377754",
+            "place": "南阿佐谷すずらん通り商店街",
+            "thumb": "newgame_02.jpg"
+        },
+        {
+            "title": "NEW GAME!!",
+            "lat": "35.6650434",
+            "lng": "139.5444345",
+            "place": "野川沿道",
+            "thumb": "newgame_02.jpg"
+        },
+        {
+            "title": "NEW GAME!!",
+            "lat": "35.7021325",
+            "lng": "139.6362908",
+            "place": "JAZZ CAFE MISTY SWEETS",
+            "thumb": "newgame_02.jpg"
+        },
+        {
+            "title": "NEW GAME!!",
+            "lat": "35.6943135",
+            "lng": "139.4439865",
+            "place": "一橋大学附属図書館",
+            "thumb": "newgame_02.jpg"
+        },
+        {
+            "title": "NEW GAME!!",
+            "lat": "35.6948756",
+            "lng": "139.4453856",
+            "place": "兼松講堂",
+            "thumb": "newgame_02.jpg"
+        },
+        {
+            "title": "NEW GAME!!",
+            "lat": "35.702592501708345",
+            "lng": "139.75498967242197",
+            "place": "東京ドームシティ MEETS PORT",
+            "thumb": "newgame_02.jpg"
+        },
+        {
+            "title": "NEW GAME!!",
+            "lat": "35.70324",
+            "lng": "139.7540179",
+            "place": "東京ドームシティ付近",
+            "thumb": "newgame_02.jpg"
+        },
+        {
+            "title": "NEW GAME!!",
+            "lat": "35.6990033",
+            "lng": "139.7705551",
+            "place": "秋葉原Hey前",
+            "thumb": "newgame_02.jpg"
+        },
+        {
+            "title": "NEW GAME!!",
+            "lat": "35.6690796",
+            "lng": "139.7003031",
+            "place": "代々木公園原宿門 時計塔前",
+            "thumb": "newgame_02.jpg"
+        },
+        {
+            "title": "NEW GAME!!",
+            "lat": "35.6990033",
+            "lng": "139.7705551",
+            "place": "BONDI CAFE YOYOGI BEACH PARK",
+            "thumb": "newgame_02.jpg"
+        },
+        {
+            "title": "NEW GAME!!",
+            "lat": "35.7302621",
+            "lng": "139.8199807",
+            "place": "十一屋",
+            "thumb": "newgame_02.jpg"
+        },
+        {
+            "title": "NEW GAME!!",
+            "lat": "35.6999823",
+            "lng": "139.6354813",
+            "place": "デニーズ 南阿佐谷店",
             "thumb": "newgame_02.jpg"
         }
     ],
