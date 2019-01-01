@@ -201,7 +201,7 @@
 
         if(!animeDetailWindow.classed("__open")) animeDetailWindow.classed("__open", true);
         animeDetailWindowTitle.html(place);
-        animeDetailWindowWrap.html("<img class='anime-detail-window__img' src='img/scene/" + title + "/" + place + ".jpg'>");
+        animeDetailWindowWrap.html("<img class='anime-detail-window__img' src='img/scene/" + title + "/" + place + "/" + place + "-0.jpg'>");
 
         d3.select("#map").on("click", function() {
           if(animeDetailWindow.classed("__open") && clickedOnWindow) animeDetailWindow.classed("__open", false);
