@@ -88,6 +88,7 @@
       var animeDetailWindow = d3.select(".anime-detail-window");
       var animeDetailWindowTitle = d3.select(".anime-detail-window__title");
       var animeDetailWindowWrap = d3.select(".anime-detail-window__wrap");
+      var animeDetailWindowButton = d3.select(".anime-detail-window__button");
   
       var buttonIcon = d3.select(".button__icon");
       var buttonIconClose = d3.select(".button--close.anime-detail-window__button");
@@ -177,13 +178,15 @@
               var marker = L.marker([d.lat, d.lng], {
                 place: d.place,
                 animeTitle: d.title,
+                imgNum: d.num,
                 bounceOnAdd: true,
                 bounceOnAddOptions: {duration: 500, height: 100},
                 // bounceOnAddCallback: function() { console.log(d.place); }
               }).on("click", function() {
                 var clickedPlace = d3.select(this).nodes()[0].options.place;
+                var selectedImgNum = d3.select(this).nodes()[0].options.imgNum;
                 selectTitle = d3.select(this).nodes()[0].options.animeTitle;
-                updateAnimeDetailWindow(clickedPlace, selectTitle);
+                updateAnimeDetailWindow(clickedPlace, selectTitle, selectedImgNum);
               });
               assetLayerGroup.addLayer(marker);
             })
@@ -195,17 +198,53 @@
   
       var clickedOnWindow = false;
   
-      function updateAnimeDetailWindow(place, title) {
+      function updateAnimeDetailWindow(place, title, imgNum) {
         // Detect click on detail-window
-        animeDetailWindow.on("click", function(){ clickedOnWindow = true; });
+        animeDetailWindowButton.on("click", function(){ clickedOnWindow = true; });
 
         if(!animeDetailWindow.classed("__open")) animeDetailWindow.classed("__open", true);
         animeDetailWindowTitle.html(place);
-        animeDetailWindowWrap.html("<img class='anime-detail-window__img' src='img/scene/" + title + "/" + place + "/" + place + "-0.jpg'>");
+
+        var imgHtml = '';
+        for (var i = 0; i < imgNum; i++) {
+          imgHtml = imgHtml + '<div class="swiper-slide"><img class="anime-detail-window__img" src="img/scene/' + title + '/' + place + '/' + place + '-' + i + '.jpg"></div>';
+        }
+        var swiperHtml = '<div class="anime-detail-window__img"> \
+          <div class="swiper-container"> \
+            <div class="swiper-wrapper">' + imgHtml + '</div> \
+            <div class="swiper-pagination"></div> \
+            <div class="swiper-button-prev"></div> \
+            <div class="swiper-button-next"></div> \
+          </div> \
+        </div>';
+
+        animeDetailWindowWrap.html(swiperHtml);
 
         d3.select("#map").on("click", function() {
           if(animeDetailWindow.classed("__open") && clickedOnWindow) animeDetailWindow.classed("__open", false);
           clickedOnWindow = false;
+        });
+
+        var swiper = new Swiper('.swiper-container', {
+          // Optional parameters
+          direction: 'horizontal',
+          loop: true,
+
+          // If we need pagination
+          pagination: {
+            el: '.swiper-pagination',
+          },
+
+          // Navigation arrows
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+
+          // And if we need scrollbar
+          scrollbar: {
+            el: '.swiper-scrollbar',
+          },
         });
       };
   
@@ -214,30 +253,30 @@
       buttonIcon.on("mouseout", function(){ buttonIconClose.classed("__touchstart", false); });
 
       /**********
-        Swiper
+        slider
       **********/
-      var swiper = d3.select("#swiper");
-      var swiperController = d3.select("#swiperController");
+      var slider = d3.select("#slider");
+      var sliderController = d3.select("#sliderController");
       var selectedAnimeTitle = d3.select("#selected_anime_title");
 
       // gather no-data title
       var noDataTitle = Object.keys(JSON).filter(key => (key !== "全作品" && !(JSON[key][0].place)))
 
-      var swiperData = Object.keys(JSON).map(function(target, i) {
+      var sliderData = Object.keys(JSON).map(function(target, i) {
         var noData = (noDataTitle.indexOf(target) > -1) ? true : false;
         return { index: i, title: target, thumb: JSON[target][0].thumb, noData: noData};
       });
 
-      swiper.datum(swiperData).call(createSwiper());
+      slider.datum(sliderData).call(createSlider());
 
       if (navigator.appVersion.toString().indexOf(".NET") > 0) {
         //IE hack
-        swiper.autoAnimation(false);
+        slider.autoAnimation(false);
       }
 
       var firstLoad = true;
 
-      swiper.on("slideChange", function(d) {
+      slider.on("slideChange", function(d) {
         selectTitle = d.title;
         selectedAnimeTitle.text(selectTitle);
         if(selectMapStyle === "pin") setMarkers();
@@ -256,16 +295,16 @@
         }
       });
 
-      swiperController.selectAll(".swip-button__button ").on("click", function() {
+      sliderController.selectAll(".swip-button__button").on("click", function() {
         var method = this.dataset.swip;
-        swiper[method]();
+        slider[method]();
       });
 
-      var swiperIndex = swiperData.filter(function(d) {
+      var sliderIndex = sliderData.filter(function(d) {
         return d.title == selectTitle;
       })[0].index;
 
-      swiper.selectSlide(swiperIndex);
+      slider.selectSlide(sliderIndex);
 
   });
 })();

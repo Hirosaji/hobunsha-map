@@ -720,6 +720,14 @@ a.leaflet-control-zoom-in:hover, a.leaflet-control-zoom-out:hover {
   height: auto;
 }
 
+.slider-container {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1000px;
+  padding: 0 15px;
+}
+
 .__fullWidth {
   margin: 0 auto 9em !important;
   width: 100% !important;
@@ -740,7 +748,7 @@ a.leaflet-control-zoom-in:hover, a.leaflet-control-zoom-out:hover {
   pointer-events: auto;
 }
 
-.swiper {
+.slider {
   overflow-y: hidden;
   overflow-x: scroll;
   -webkit-overflow-scrolling: touch;
@@ -751,12 +759,12 @@ a.leaflet-control-zoom-in:hover, a.leaflet-control-zoom-out:hover {
 }
 
 @media screen and (min-width: 375px) {
-  .swiper {
+  .slider {
     height: 165px;
   }
 }
 
-.swiper-wrapper {
+.slider-wrapper {
   display: -ms-flexbox;
   display: flex;
   height: 48px;
@@ -765,12 +773,12 @@ a.leaflet-control-zoom-in:hover, a.leaflet-control-zoom-out:hover {
 }
 
 @media screen and (min-width: 375px) {
-  .swiper-wrapper {
+  .slider-wrapper {
     height: 125px;
   }
 }
 
-.swiper-blank {
+.slider-blank {
   width: calc(50% - 45px);
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -779,12 +787,12 @@ a.leaflet-control-zoom-in:hover, a.leaflet-control-zoom-out:hover {
 }
 
 @media screen and (min-width: 375px) {
-  .swiper-blank {
+  .slider-blank {
     width: calc(50% - 45px);
   }
 }
 
-.swiper-slide {
+.slider-slide {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
@@ -809,19 +817,19 @@ a.leaflet-control-zoom-in:hover, a.leaflet-control-zoom-out:hover {
 }
 
 @media screen and (min-width: 375px) {
-  .swiper-slide {
+  .slider-slide {
     width: auto;
     height: 125px;
   }
 }
 
-.swiper-slide-active {
+.slider-slide-active {
   z-index: 10;
   transform: scale(1.16666);
 }
 
 @media screen and (min-width: 375px) {
-  .swiper-slide-active {
+  .slider-slide-active {
     z-index: 10;
     transform: scale(1.3);
   }
@@ -1224,7 +1232,7 @@ a.leaflet-control-zoom-in:hover, a.leaflet-control-zoom-out:hover {
   left: auto;
 }
 
-.swip-button, .swiper {
+.swip-button, .slider {
   top: auto;
   right: 0;
   bottom: 0;

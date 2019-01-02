@@ -1,4 +1,4 @@
-function createSwiper() {
+function createSlider() {
   var _wrapper = null;
 
   var _minIndex = null;
@@ -18,7 +18,7 @@ function createSwiper() {
       _wrapper = d3
         .select(this)
         .append("div")
-        .classed("swiper-wrapper", true);
+        .classed("slider-wrapper", true);
 
       main();
 
@@ -77,13 +77,13 @@ function createSwiper() {
   }
 
   function addSlide(_data) {
-    var selectSlide = _wrapper.selectAll("swiper-slide").data(_data);
+    var selectSlide = _wrapper.selectAll("slider-slide").data(_data);
 
     var enterSlide = selectSlide
       .enter()
       .append("img")
       .attr("class", function(d){ if(d.noData) return "__no-data"; })
-      .classed("swiper-slide clickable", true)
+      .classed("slider-slide clickable", true)
       .attr("src", function(d){ return "img/key_visual/" + d.thumb; });
 
     selectSlide
@@ -107,13 +107,13 @@ function createSwiper() {
   }
 
   function addBlank() {
-    _wrapper.insert("div", ":first-child").classed("swiper-blank", true);
-    _wrapper.append("div").classed("swiper-blank", true);
+    _wrapper.insert("div", ":first-child").classed("slider-blank", true);
+    _wrapper.append("div").classed("slider-blank", true);
   }
 
   //スライドがクリックされた際に発行されるイベントを設定
   function setClickSlideEvent(_selection) {
-    _wrapper.selectAll(".swiper-slide").on("click.centerd", function(d, i) {
+    _wrapper.selectAll(".slider-slide").on("click.centerd", function(d, i) {
       selectedSlide(i, _selection.node(), _slideDuration);
       _dispatch.call("slideClick", this, d);
     });
@@ -121,7 +121,7 @@ function createSwiper() {
 
   //端のスライドがクリックされた際に発行されるイベントを設定
   function setClickEdgeEvent(_selection) {
-    var edge = d3.selectAll(".swiper-slide").filter(function(d, i, node) {
+    var edge = d3.selectAll(".slider-slide").filter(function(d, i, node) {
       if (0 == i) d._edge = "first";
       if (node.length - 1 == i) d._edge = "first";
       return 0 == i || node.length - 1 == i;
@@ -152,14 +152,14 @@ function createSwiper() {
   }
 
   function selectedSlide(index, container, duration) {
-    d3.selectAll(".swiper-slide").classed("swiper-slide-active", false);
+    d3.selectAll(".slider-slide").classed("slider-slide-active", false);
 
     var slide = d3
-      .selectAll(".swiper-slide")
+      .selectAll(".slider-slide")
       .filter(function(d, i, node) {
         return i == index;
       })
-      .classed("swiper-slide-active", true);
+      .classed("slider-slide-active", true);
 
     var start = container.scrollLeft;
     var target = slide.node().offsetLeft - container.clientWidth / 2 + 45;

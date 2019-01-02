@@ -707,6 +707,14 @@ a {
   }
 }
 
+.slider-container {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1000px;
+  padding: 0 15px;
+}
+
 .__fullWidth {
   margin: 0 auto 9em !important;
   width: 100% !important;
@@ -727,7 +735,7 @@ a {
   pointer-events: auto;
 }
 
-.swiper {
+.slider {
   overflow-y: hidden;
   overflow-x: scroll;
   -webkit-overflow-scrolling: touch;
@@ -1175,7 +1183,7 @@ a {
   left: auto;
 }
 
-.swip-button, .swiper {
+.swip-button, .slider {
   top: auto;
   right: 0;
   bottom: 0;
