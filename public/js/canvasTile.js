@@ -126,11 +126,11 @@ function addCanvasTile(tileIndex, size, selectTitle) {
   }
 
   function setColor(count) {
-    return count > 4 ? "#a50f15" :
-           count > 3  ? "#de2d26" :
-           count > 2  ? "#fb6a4a" :
-           count > 1  ? "#fc9272" :
-           count > 0  ? "#fcbba1" :
+    return count > 4 ? "#a63603" :
+           count > 3  ? "#e6550d" :
+           count > 2  ? "#fd8d3c" :
+           count > 1  ? "#fdae6b" :
+           count > 0  ? "#fdd0a2" :
                         "white";
   }
 }
