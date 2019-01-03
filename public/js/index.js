@@ -1,6 +1,7 @@
 !(function() {
   "use strict";
 
+  // Load data
   d3.queue()
     .defer(d3.json, 'data/hobunsha_seiti_info.json')
     .defer(d3.json, 'data/city-hobunsha.geojson')
@@ -8,6 +9,7 @@
     .defer(d3.tsv, 'data/hobunsya_anime.tsv')
     .await(function(_, JSON, cityGeoJSON, prefGeoJSON, animeList) {
 
+      // Init options
       var center = [36, 137.6];
       var selectTitle = "ひだまりスケッチ";
       var selectMapStyle = "pin";
@@ -16,7 +18,7 @@
         Map
       **********/
 
-      //GeoJSONの分割する際のパラメーター
+      // Canvas tile parameters
       const cityTileOptions = {
         maxZoom: 20,
         tolerance: 5,
@@ -38,11 +40,11 @@
         type: "pref"
       };
   
-      //GeoJSONデータをタイル座標ごとに分割する
+      // Devide GeoJSON data into canvas tiles
       var cityTileIndex = geojsonvt(cityGeoJSON, cityTileOptions);
       var prefTileIndex = geojsonvt(prefGeoJSON, prefTileOptions);
 
-      //leafetに追加するカスタムグリッドレイヤーのオブジェクトを生成
+      // Add custom grid layer object on leaflet
       var cityGrid = L.gridLayer();
       var prefGrid = L.gridLayer();
       var prevCityGrid = cityGrid;
@@ -79,7 +81,7 @@
         zoom: 5
       });
 
-      map.zoomControl.setPosition("bottomleft");
+      map.zoomControl.setPosition("bottomleft");  // zoom position
   
       L.control.layers(baseMaps).addTo(map);
   
@@ -96,34 +98,37 @@
       var switchStyleToggle = d3.select("#switchStyle");
       var switchLayerToggle = d3.selectAll(".leaflet-control-layers-selector");
 
-      // switch layer event
+      // Switch layer event
       switchLayerToggle.on("change", function() {
         var selectLayerName = d3.select(this.parentNode).select("span").html().replace(" ", "");
 
+        // Update map components (when "pin" -> "paint")
         if (selectMapStyle === "paint") {
 
           var newCityGrid = L.gridLayer();
           var newPrefGrid = L.gridLayer();
           prevCityGrid = newCityGrid;
           prevPrefGrid = newPrefGrid;
-    
+
+          // remove map components
           d3.select(".leaflet-pane.leaflet-map-pane").remove();
           d3.select(".leaflet-control-container").remove();
-
           map.remove();
+
+          // set map components
           map = L.map('map', {
             layers: [baseMaps[selectLayerName]],
             center: center,
             zoom: 5
-          });      
+          });
           map.zoomControl.setPosition("bottomleft");
+
           L.control.layers(baseMaps).addTo(map);
-          
           setLayer();
         }
       });
 
-      // switch paint style / pin style event
+      // Switch paint style / pin style event
       switchStyleToggle.on("change", function() {
         var flag = this.checked;
         // paint
@@ -143,7 +148,9 @@
         }
       });
 
-      // functions
+      /******************
+        Event functions
+      ******************/
       function setLayer() {
           var addCityTile = addCanvasTile(cityTileIndex, 256, selectTitle);
           var addPrefTile = addCanvasTile(prefTileIndex, 256, selectTitle);
@@ -202,9 +209,18 @@
         // Detect click on detail-window
         animeDetailWindowButton.on("click", function(){ clickedOnWindow = true; });
 
+        // Open window event
         if(!animeDetailWindow.classed("__open")) animeDetailWindow.classed("__open", true);
         animeDetailWindowTitle.html(place);
 
+        d3.select("#map").on("click", function() {
+          if(animeDetailWindow.classed("__open") && clickedOnWindow) animeDetailWindow.classed("__open", false);
+          clickedOnWindow = false;
+        });
+
+        /**********
+          Swiper
+        **********/
         var imgHtml = '';
         for (var i = 0; i < imgNum; i++) {
           imgHtml = imgHtml + '<div class="swiper-slide"><img class="anime-detail-window__img" src="img/scene/' + title + '/' + place + '/' + place + '-' + i + '.jpg"></div>';
@@ -220,17 +236,13 @@
 
         animeDetailWindowWrap.html(swiperHtml);
 
-        d3.select("#map").on("click", function() {
-          if(animeDetailWindow.classed("__open") && clickedOnWindow) animeDetailWindow.classed("__open", false);
-          clickedOnWindow = false;
-        });
-
+        // Swiper event parameters
         var swiper = new Swiper('.swiper-container', {
           // Optional parameters
           direction: 'horizontal',
           loop: true,
 
-          // If we need pagination
+          // Pagination
           pagination: {
             el: '.swiper-pagination',
           },
@@ -241,7 +253,7 @@
             prevEl: '.swiper-button-prev',
           },
 
-          // And if we need scrollbar
+          // Scrollbar
           scrollbar: {
             el: '.swiper-scrollbar',
           },
@@ -253,13 +265,13 @@
       buttonIcon.on("mouseout", function(){ buttonIconClose.classed("__touchstart", false); });
 
       /**********
-        slider
+        Slider
       **********/
       var slider = d3.select("#slider");
       var sliderController = d3.select("#sliderController");
       var selectedAnimeTitle = d3.select("#selected_anime_title");
 
-      // gather no-data title
+      // Gather no-data title
       var noDataTitle = Object.keys(JSON).filter(key => (key !== "全作品" && !(JSON[key][0].place)))
 
       var sliderData = Object.keys(JSON).map(function(target, i) {
@@ -276,6 +288,7 @@
 
       var firstLoad = true;
 
+      // Update map components
       slider.on("slideChange", function(d) {
         selectTitle = d.title;
         selectedAnimeTitle.text(selectTitle);
@@ -287,7 +300,7 @@
         }
 
         if(!firstLoad) {
-          // update control
+          // Update control
           d3.select(".leaflet-top.leaflet-right").html("");
           L.control.layers(baseMaps).addTo(map);
         } else {
@@ -295,6 +308,7 @@
         }
       });
 
+      // Update slider UI
       sliderController.selectAll(".swip-button__button").on("click", function() {
         var method = this.dataset.swip;
         slider[method]();

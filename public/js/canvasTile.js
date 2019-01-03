@@ -14,8 +14,8 @@ function addCanvasTile(tileIndex, size, selectTitle) {
     if(tileIndex.options.type === "city") canvas.id = "canvasElement01";
     else if(tileIndex.options.type === "pref") canvas.id = "canvasElement02";
     var ctx = canvas.getContext("2d");
-    
-    //デフォルトスタイル
+
+    // Default style
     var _fillStyle = "white";
     var _storkeStyle = "black";
 
@@ -40,7 +40,7 @@ function addCanvasTile(tileIndex, size, selectTitle) {
       var feature = features[i],
         type = feature.type,
         tags = feature.tags;
-        
+
 
       if (selectTitle === "全作品") {
         var seitiBool = Object.values(tags.placeCount).some(value => value > 0);
@@ -59,9 +59,9 @@ function addCanvasTile(tileIndex, size, selectTitle) {
         ctx.strokeStyle = tags._pickingColor
           ? tags._pickingColor
           : null;
-          
+
       } else if(tileIndex.options.type === "city") {
-        
+
         ctx.fillStyle = seitiBool
           ? thisColor
           : _fillStyle;
@@ -89,7 +89,7 @@ function addCanvasTile(tileIndex, size, selectTitle) {
       for (var j = 0; j < feature.geometry.length; j++) {
         var geom = feature.geometry[j];
 
-        if (type === 1) { //ポイントの場合は円を描く
+        if (type === 1) {  // Draw circle if it's point
           pad = 4096 * padding * ratio;
 
           ctx.arc(
