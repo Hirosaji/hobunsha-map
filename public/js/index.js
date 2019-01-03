@@ -171,6 +171,9 @@
           d3.select(prefSelector.parentNode).style("z-index", 200);
       }
   
+      var imgNum = 0;
+      var imgOrder = 0;
+
       function setMarkers() {
           
         assetLayerGroup.clearLayers();
@@ -191,9 +194,9 @@
                 // bounceOnAddCallback: function() { console.log(d.place); }
               }).on("click", function() {
                 var clickedPlace = d3.select(this).nodes()[0].options.place;
-                var selectedImgNum = d3.select(this).nodes()[0].options.imgNum;
                 selectTitle = d3.select(this).nodes()[0].options.animeTitle;
-                updateAnimeDetailWindow(clickedPlace, selectTitle, selectedImgNum);
+                imgNum = d3.select(this).nodes()[0].options.imgNum;
+                updateAnimeDetailWindow(clickedPlace, selectTitle);
               });
               assetLayerGroup.addLayer(marker);
             })
@@ -205,7 +208,7 @@
   
       var clickedOnWindow = false;
   
-      function updateAnimeDetailWindow(place, title, imgNum) {
+      function updateAnimeDetailWindow(place, title) {
         // Detect click on detail-window
         animeDetailWindowButton.on("click", function(){ clickedOnWindow = true; });
 
@@ -223,7 +226,11 @@
         **********/
         var imgHtml = '';
         for (var i = 0; i < imgNum; i++) {
-          imgHtml = imgHtml + '<div class="swiper-slide"><img class="anime-detail-window__img" src="img/scene/' + title + '/' + place + '/' + place + '-' + i + '.jpg"></div>';
+          var activeClass = (i === 0) ? ' swiper-img__active' : '';
+          imgHtml = imgHtml + 
+            '<div class="swiper-slide"> \
+              <img class="swiper-img' + activeClass + '" id="img' + i + '" src="img/scene/' + title + '/' + place + '/' + place + '-' + i + '.jpg"> \
+            </div>';
         }
         var swiperHtml = '<div class="anime-detail-window__img"> \
           <div class="swiper-container"> \
@@ -237,7 +244,7 @@
         animeDetailWindowWrap.html(swiperHtml);
 
         // Swiper event parameters
-        var swiper = new Swiper('.swiper-container', {
+        new Swiper('.swiper-container', {
           // Optional parameters
           direction: 'horizontal',
           loop: true,
@@ -258,8 +265,22 @@
             el: '.swiper-scrollbar',
           },
         });
+
+        // Set img order event
+        d3.select('.swiper-button-next').on('click', function() {
+          d3.selectAll('#img' + imgOrder).classed('swiper-img__active', false);
+
+          imgOrder = (imgOrder === imgNum - 1) ? 0 : imgOrder + 1;
+          d3.selectAll('#img' + imgOrder).classed('swiper-img__active', true);
+        });
+        d3.select('.swiper-button-prev').on('click', function() {
+          d3.selectAll('#img' + imgOrder).classed('swiper-img__active', false);
+
+          imgOrder = (imgOrder === 0) ? imgNum - 1 : imgOrder - 1;
+          d3.selectAll('#img' + imgOrder).classed('swiper-img__active', true);
+        });
       };
-  
+      
       // button--close mouseover event
       buttonIcon.on("mouseover", function(){ buttonIconClose.classed("__touchstart", true); });
       buttonIcon.on("mouseout", function(){ buttonIconClose.classed("__touchstart", false); });
@@ -306,6 +327,9 @@
         } else {
           firstLoad = false;
         }
+
+        // Initialize imgOrder
+        d3.selectAll('.leaflet-marker-icon').on('click', function() { imgOrder = 0; });
       });
 
       // Update slider UI

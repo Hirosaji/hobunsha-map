@@ -720,6 +720,16 @@ a.leaflet-control-zoom-in:hover, a.leaflet-control-zoom-out:hover {
   height: auto;
 }
 
+.swiper-img {
+  width: 0%;
+  height: 0%;
+}
+
+.swiper-img__active {
+  width: 100%;
+  height: auto;
+}
+
 .slider-container {
   position: relative;
   margin-left: auto;
