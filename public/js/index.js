@@ -222,7 +222,7 @@
         });
 
         /**********
-          Swiper
+          Image Swiper
         **********/
         var imgHtml = '';
         for (var i = 0; i < imgNum; i++) {
@@ -266,19 +266,6 @@
           },
         });
 
-        // Set img order event
-        d3.select('.swiper-button-next').on('click', function() {
-          d3.selectAll('#img' + imgOrder).classed('swiper-img__active', false);
-
-          imgOrder = (imgOrder === imgNum - 1) ? 0 : imgOrder + 1;
-          d3.selectAll('#img' + imgOrder).classed('swiper-img__active', true);
-        });
-        d3.select('.swiper-button-prev').on('click', function() {
-          d3.selectAll('#img' + imgOrder).classed('swiper-img__active', false);
-
-          imgOrder = (imgOrder === 0) ? imgNum - 1 : imgOrder - 1;
-          d3.selectAll('#img' + imgOrder).classed('swiper-img__active', true);
-        });
       };
       
       // button--close mouseover event
