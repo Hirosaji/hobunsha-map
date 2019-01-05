@@ -137,6 +137,8 @@
 
           assetLayerGroup.clearLayers();
           setLayer();
+
+          animeDetailWindow.classed("__open", false);  // close window
         }
         // pin
         else {
@@ -152,23 +154,23 @@
         Event functions
       ******************/
       function setLayer() {
-          var addCityTile = addCanvasTile(cityTileIndex, 256, selectTitle);
-          var addPrefTile = addCanvasTile(prefTileIndex, 256, selectTitle);
-          prevCityGrid.createTile = function(coords, done) {
-            var canvas = addPrefTile(coords, done);
-            return canvas;
-          };
-          prevPrefGrid.createTile = function(coords, done) {
-            var canvas = addCityTile(coords, done);
-            return canvas;
-          };
-          map.addLayer(prevCityGrid);
-          map.addLayer(prevPrefGrid);
+        var addCityTile = addCanvasTile(cityTileIndex, 256, selectTitle);
+        var addPrefTile = addCanvasTile(prefTileIndex, 256, selectTitle);
+        prevCityGrid.createTile = function(coords, done) {
+          var canvas = addPrefTile(coords, done);
+          return canvas;
+        };
+        prevPrefGrid.createTile = function(coords, done) {
+          var canvas = addCityTile(coords, done);
+          return canvas;
+        };
+        map.addLayer(prevCityGrid);
+        map.addLayer(prevPrefGrid);
 
-          var citySelector = d3.select("#canvasElement01").node().parentNode;
-          d3.select(citySelector.parentNode).style("z-index", 100);
-          var prefSelector = d3.select("#canvasElement02").node().parentNode;
-          d3.select(prefSelector.parentNode).style("z-index", 200);
+        var citySelector = d3.select("#canvasElement01").node().parentNode;
+        d3.select(citySelector.parentNode).style("z-index", 100);
+        var prefSelector = d3.select("#canvasElement02").node().parentNode;
+        d3.select(prefSelector.parentNode).style("z-index", 200);
       }
   
       var imgNum = 0;
@@ -204,6 +206,20 @@
             map.addLayer(assetLayerGroup);
           }
         })
+
+        changePinColor();  // change pin color
+      }
+
+      var _markerSrc;
+
+      // Change clicked pin color
+      function changePinColor() {
+        d3.selectAll('.leaflet-marker-icon').on('click', function() {
+          _markerSrc = d3.select(this).attr('src').replace('_red', '').split('.png')[0];
+
+          d3.selectAll('.leaflet-marker-icon').attr('src', _markerSrc + '.png');
+          d3.select(this).attr('src', _markerSrc + '_red.png');
+        });
       }
   
       var clickedOnWindow = false;
@@ -268,9 +284,12 @@
 
       };
       
-      // button--close mouseover event
+      // button--close event
       buttonIcon.on("mouseover", function(){ buttonIconClose.classed("__touchstart", true); });
       buttonIcon.on("mouseout", function(){ buttonIconClose.classed("__touchstart", false); });
+      buttonIcon.on("click", function(){
+        d3.selectAll('.leaflet-marker-icon').attr('src', _markerSrc.replace('_red', '') + '.png');
+      })
 
       /**********
         Slider
@@ -317,6 +336,9 @@
 
         // Initialize imgOrder
         d3.selectAll('.leaflet-marker-icon').on('click', function() { imgOrder = 0; });
+
+        changePinColor();  // change pin color
+        animeDetailWindow.classed("__open", false);  // close window
       });
 
       // Update slider UI
@@ -330,6 +352,12 @@
       })[0].index;
 
       slider.selectSlide(sliderIndex);
+
+
+      /**********
+        others
+      **********/
+      changePinColor();  // change pin color
 
   });
 })();
