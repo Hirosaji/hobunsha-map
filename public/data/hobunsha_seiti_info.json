@@ -595,10 +595,26 @@
         },
         {
             "title": "Aチャンネル",
+            "lat": "35.69133",
+            "lng": "139.446743",
+            "place": "World Maket向かいの歩道",
+            "num": 3,
+            "thumb": "achannel.jpg"
+        },
+        {
+            "title": "Aチャンネル",
+            "lat": "35.691871",
+            "lng": "139.446724",
+            "place": "臼井医院周辺",
+            "num": 2,
+            "thumb": "achannel.jpg"
+        },
+        {
+            "title": "Aチャンネル",
             "lat": "35.671478",
             "lng": "139.480759",
             "place": "くるる館内",
-            "num": 7,
+            "num": 8,
             "thumb": "achannel.jpg"
         },
         {
@@ -718,7 +734,7 @@
             "lat": "35.29971568062001",
             "lng": "139.47868824005127",
             "place": "江の島展望灯台",
-            "num": 1,
+            "num": 2,
             "thumb": "achannel.jpg"
         },
         {
@@ -765,8 +781,16 @@
             "title": "Aチャンネル",
             "lat": "35.699582",
             "lng": "139.480496",
+            "place": "中央文化センター前 桜通り",
+            "num": 1,
+            "thumb": "achannel.jpg"
+        },
+        {
+            "title": "Aチャンネル",
+            "lat": "35.699582",
+            "lng": "139.480496",
             "place": "国分寺駅南口",
-            "num": 2,
+            "num": 3,
             "thumb": "achannel.jpg"
         },
         {
@@ -774,13 +798,13 @@
             "lat": "35.6997716",
             "lng": "139.4794327",
             "place": "国分寺駅改札",
-            "num": 1,
+            "num": 3,
             "thumb": "achannel.jpg"
         },
         {
             "title": "Aチャンネル",
-            "lat": "35.698406",
-            "lng": "139.446198",
+            "lat": "35.698438",
+            "lng": "139.446212",
             "place": "JR国立駅南口交差点",
             "num": 2,
             "thumb": "achannel.jpg"
@@ -843,10 +867,42 @@
         },
         {
             "title": "Aチャンネル",
+            "lat": "35.697769",
+            "lng": "139.478087",
+            "place": "南町三丁目交差点",
+            "num": 1,
+            "thumb": "achannel.jpg"
+        },
+        {
+            "title": "Aチャンネル",
+            "lat": "35.697221",
+            "lng": "139.477422",
+            "place": "南町三丁目交差点坂下",
+            "num": 1,
+            "thumb": "achannel.jpg"
+        },
+        {
+            "title": "Aチャンネル",
             "lat": "35.708538",
             "lng": "139.666556",
             "place": "秋吉",
+            "num": 4,
+            "thumb": "achannel.jpg"
+        },
+        {
+            "title": "Aチャンネル",
+            "lat": "35.709686",
+            "lng": "139.666719",
+            "place": "ホットパワーズ",
             "num": 1,
+            "thumb": "achannel.jpg"
+        },
+        {
+            "title": "Aチャンネル",
+            "lat": "35.713763",
+            "lng": "139.634865",
+            "place": "KOJIMA",
+            "num": 5,
             "thumb": "achannel.jpg"
         },
         {
@@ -990,7 +1046,7 @@
             "lat": "35.3077721",
             "lng": "139.4871848",
             "place": "片瀬東浜海水浴場",
-            "num": 8,
+            "num": 11,
             "thumb": "achannel.jpg"
         }
     ],
