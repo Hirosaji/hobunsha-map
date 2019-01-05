@@ -1670,7 +1670,7 @@
 
         // hobunsha-map additional code
         d3.selectAll('.swiper-img').classed('swiper-img__active', false);
-        d3.select('.swiper-slide-active > .swiper-img').classed('swiper-img__active', function(){console.log(this); return true});
+        d3.select('.swiper-slide-active > .swiper-img').classed('swiper-img__active', true);
       } else {
         $wrapperEl
           .children(("." + (params.slideClass) + "." + (params.slideDuplicateClass) + "[data-swiper-slide-index=\"" + realIndex + "\"]"))
@@ -1678,7 +1678,7 @@
 
         // hobunsha-map additional code
         d3.selectAll('.swiper-img').classed('swiper-img__active', false);
-        d3.select('.swiper-slide-active > .swiper-img').classed('swiper-img__active', function(){console.log(this); return true});
+        d3.select('.swiper-slide-active > .swiper-img').classed('swiper-img__active', true);
       }
     }
     // Next Slide
