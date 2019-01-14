@@ -2550,7 +2550,498 @@
     "こみっくがーるず": [
         {
             "title": "こみっくがーるず",
+            "lat": "37.0686645",
+            "lng": "140.1855981",
+            "place": "福島県境 道路標識",
+            "num": 4,
+            "thumb": "comicgirls.jpg"
+        },
+        {
+            "title": "こみっくがーるず",
+            "lat": "37.047277",
+            "lng": "140.2280589",
+            "place": "白河神社",
+            "num": 7,
+            "thumb": "comicgirls.jpg"
+        },
+        {
+            "title": "こみっくがーるず",
+            "lat": "35.7029551",
+            "lng": "139.751263",
+            "place": "芳文社",
+            "num": 11,
+            "thumb": "comicgirls.jpg"
+        },
+        {
+            "title": "こみっくがーるず",
+            "lat": "35.7099719",
+            "lng": "139.7545171",
+            "place": "清和公園前",
+            "num": 13,
+            "thumb": "comicgirls.jpg"
+        },
+        {
+            "title": "こみっくがーるず",
+            "lat": "35.7099719",
+            "lng": "139.7545171",
+            "place": "東北新幹線 新白河駅",
+            "num": 3,
+            "thumb": "comicgirls.jpg"
+        },
+        {
+            "title": "こみっくがーるず",
+            "lat": "35.7116528",
+            "lng": "139.7539904",
+            "place": "女子まんが家寮 道中",
             "num": 1,
+            "thumb": "comicgirls.jpg"
+        },
+        {
+            "title": "こみっくがーるず",
+            "lat": "35.711793",
+            "lng": "139.754207",
+            "place": "女子まんが家寮 道中２",
+            "num": 1,
+            "thumb": "comicgirls.jpg"
+        },
+        {
+            "title": "こみっくがーるず",
+            "lat": "35.7119861",
+            "lng": "139.7541914",
+            "place": "女子まんが家寮 道中３",
+            "num": 1,
+            "thumb": "comicgirls.jpg"
+        },
+        {
+            "title": "こみっくがーるず",
+            "lat": "35.712041",
+            "lng": "139.754181",
+            "place": "女子まんが家寮 道中４",
+            "num": 2,
+            "thumb": "comicgirls.jpg"
+        },
+        {
+            "title": "こみっくがーるず",
+            "lat": "35.7121059",
+            "lng": "139.7549715",
+            "place": "女子まんが家寮 道中５",
+            "num": 1,
+            "thumb": "comicgirls.jpg"
+        },
+        {
+            "title": "こみっくがーるず",
+            "lat": "35.7133087",
+            "lng": "139.7557091",
+            "place": "女子まんが家寮 道中６",
+            "num": 2,
+            "thumb": "comicgirls.jpg"
+        },
+        {
+            "title": "こみっくがーるず",
+            "lat": "35.711834",
+            "lng": "139.748802",
+            "place": "善光寺坂 慈眼院沢蔵司稲荷前",
+            "num": 1,
+            "thumb": "comicgirls.jpg"
+        },
+        {
+            "title": "こみっくがーるず",
+            "lat": "35.711834",
+            "lng": "139.748802",
+            "place": "善光寺坂近く",
+            "num": 1,
+            "thumb": "comicgirls.jpg"
+        },
+        {
+            "title": "こみっくがーるず",
+            "lat": "35.702273",
+            "lng": "139.745273",
+            "place": "飯田橋駅高架下",
+            "num": 1,
+            "thumb": "comicgirls.jpg"
+        },
+        {
+            "title": "こみっくがーるず",
+            "lat": "35.6913527",
+            "lng": "139.7011799",
+            "place": "新宿駅東口 みどりの窓口前",
+            "num": 3,
+            "thumb": "comicgirls.jpg"
+        },
+        {
+            "title": "こみっくがーるず",
+            "lat": "35.691887",
+            "lng": "139.702737",
+            "place": "新宿駅 B7,B8出入口",
+            "num": 3,
+            "thumb": "comicgirls.jpg"
+        },
+        {
+            "title": "こみっくがーるず",
+            "lat": "35.6921219",
+            "lng": "139.7023377",
+            "place": "アニメイト新宿",
+            "num": 37,
+            "thumb": "comicgirls.jpg"
+        },
+        {
+            "title": "こみっくがーるず",
+            "lat": "35.6903109",
+            "lng": "139.7045053",
+            "place": "フレッシュネスバーガー 新宿３丁目店",
+            "num": 11,
+            "thumb": "comicgirls.jpg"
+        },
+        {
+            "title": "こみっくがーるず",
+            "lat": "35.6898839",
+            "lng": "139.7051947",
+            "place": "世界堂 新宿本店",
+            "num": 11,
+            "thumb": "comicgirls.jpg"
+        },
+        {
+            "title": "こみっくがーるず",
+            "lat": "35.6929698",
+            "lng": "139.7028013",
+            "place": "新宿駅付近",
+            "num": 1,
+            "thumb": "comicgirls.jpg"
+        },
+        {
+            "title": "こみっくがーるず",
+            "lat": "35.713230",
+            "lng": "139.756604",
+            "place": "新宿駅 B6,B7間",
+            "num": 3,
+            "thumb": "comicgirls.jpg"
+        },
+        {
+            "title": "こみっくがーるず",
+            "lat": "35.690668",
+            "lng": "139.704846",
+            "place": "新宿通り",
+            "num": 1,
+            "thumb": "comicgirls.jpg"
+        },
+        {
+            "title": "こみっくがーるず",
+            "lat": "35.6920892",
+            "lng": "139.7013337",
+            "place": "新宿駅東口前",
+            "num": 1,
+            "thumb": "comicgirls.jpg"
+        },
+        {
+            "title": "こみっくがーるず",
+            "lat": "35.6914253",
+            "lng": "139.6999565",
+            "place": "新宿駅 16番線ホーム",
+            "num": 1,
+            "thumb": "comicgirls.jpg"
+        },
+        {
+            "title": "こみっくがーるず",
+            "lat": "35.713230",
+            "lng": "139.756604",
+            "place": "清水橋近くバス停",
+            "num": 1,
+            "thumb": "comicgirls.jpg"
+        },
+        {
+            "title": "こみっくがーるず",
+            "lat": "35.711293",
+            "lng": "139.752604",
+            "place": "えんま通り商店街前",
+            "num": 1,
+            "thumb": "comicgirls.jpg"
+        },
+        {
+            "title": "こみっくがーるず",
+            "lat": "35.7124736",
+            "lng": "139.7445519",
+            "place": "都立竹早高校前",
+            "num": 1,
+            "thumb": "comicgirls.jpg"
+        },
+        {
+            "title": "こみっくがーるず",
+            "lat": "35.700290",
+            "lng": "139.771851",
+            "place": "とらのあな秋葉原店Ｂ横",
+            "num": 23,
+            "thumb": "comicgirls.jpg"
+        },
+        {
+            "title": "こみっくがーるず",
+            "lat": "35.7004645",
+            "lng": "139.7722536",
+            "place": "秋葉原UDX横の通り",
+            "num": 1,
+            "thumb": "comicgirls.jpg"
+        },
+        {
+            "title": "こみっくがーるず",
+            "lat": "35.700332",
+            "lng": "139.772064",
+            "place": "とらのあな秋葉原店Ｂ裏",
+            "num": 1,
+            "thumb": "comicgirls.jpg"
+        },
+        {
+            "title": "こみっくがーるず",
+            "lat": "35.700332",
+            "lng": "139.772064",
+            "place": "ブリスター コミックス前",
+            "num": 7,
+            "thumb": "comicgirls.jpg"
+        },
+        {
+            "title": "こみっくがーるず",
+            "lat": "35.6992456",
+            "lng": "139.7714039",
+            "place": "秋葉原メイン通り",
+            "num": 1,
+            "thumb": "comicgirls.jpg"
+        },
+        {
+            "title": "こみっくがーるず",
+            "lat": "35.660838",
+            "lng": "139.700713",
+            "place": "ALOOK 渋谷店",
+            "num": 36,
+            "thumb": "comicgirls.jpg"
+        },
+        {
+            "title": "こみっくがーるず",
+            "lat": "35.6623987",
+            "lng": "139.698268",
+            "place": "ロイヤルガーデンカフェ渋谷",
+            "num": 21,
+            "thumb": "comicgirls.jpg"
+        },
+        {
+            "title": "こみっくがーるず",
+            "lat": "35.6911141",
+            "lng": "139.7024076",
+            "place": "新宿ライオン会館前",
+            "num": 6,
+            "thumb": "comicgirls.jpg"
+        },
+        {
+            "title": "こみっくがーるず",
+            "lat": "35.6904897",
+            "lng": "139.7022184",
+            "place": "珈琲西武",
+            "num": 1,
+            "thumb": "comicgirls.jpg"
+        },
+        {
+            "title": "こみっくがーるず",
+            "lat": "35.6904775",
+            "lng": "139.701761",
+            "place": "星乃珈琲店 スフレ館 新宿東口店",
+            "num": 1,
+            "thumb": "comicgirls.jpg"
+        },
+        {
+            "title": "こみっくがーるず",
+            "lat": "35.683686",
+            "lng": "139.702274",
+            "place": "代々木駅 4番線ホーム",
+            "num": 1,
+            "thumb": "comicgirls.jpg"
+        },
+        {
+            "title": "こみっくがーるず",
+            "lat": "35.6925538",
+            "lng": "139.7379243",
+            "place": "外濠公園",
+            "num": 4,
+            "thumb": "comicgirls.jpg"
+        },
+        {
+            "title": "こみっくがーるず",
+            "lat": "35.702271",
+            "lng": "139.752022",
+            "place": "水道橋駅西口",
+            "num": 1,
+            "thumb": "comicgirls.jpg"
+        },
+        {
+            "title": "こみっくがーるず",
+            "lat": "35.702111",
+            "lng": "139.753173",
+            "place": "水道橋駅 ２番線ホーム",
+            "num": 2,
+            "thumb": "comicgirls.jpg"
+        },
+        {
+            "title": "こみっくがーるず",
+            "lat": "35.700987",
+            "lng": "139.7667298",
+            "place": "明神カフェ",
+            "num": 7,
+            "thumb": "comicgirls.jpg"
+        },
+        {
+            "title": "こみっくがーるず",
+            "lat": "35.7019218",
+            "lng": "139.7670433",
+            "place": "神田明神",
+            "num": 19,
+            "thumb": "comicgirls.jpg"
+        },
+        {
+            "title": "こみっくがーるず",
+            "lat": "35.7011018",
+            "lng": "139.767147",
+            "place": "神田明神入り口",
+            "num": 3,
+            "thumb": "comicgirls.jpg"
+        },
+        {
+            "title": "こみっくがーるず",
+            "lat": "35.6810639",
+            "lng": "139.7656129",
+            "place": "東京駅前",
+            "num": 2,
+            "thumb": "comicgirls.jpg"
+        },
+        {
+            "title": "こみっくがーるず",
+            "lat": "35.655781",
+            "lng": "139.737320",
+            "place": "麻布十番駅 3番出口",
+            "num": 1,
+            "thumb": "comicgirls.jpg"
+        },
+        {
+            "title": "こみっくがーるず",
+            "lat": "35.6550105",
+            "lng": "139.737186",
+            "place": "麻布十番駅 改札内トイレ前",
+            "num": 6,
+            "thumb": "comicgirls.jpg"
+        },
+        {
+            "title": "こみっくがーるず",
+            "lat": "35.65551",
+            "lng": "139.737164",
+            "place": "麻布十番駅 1番線側ホーム",
+            "num": 1,
+            "thumb": "comicgirls.jpg"
+        },
+        {
+            "title": "こみっくがーるず",
+            "lat": "35.030579",
+            "lng": "136.729766",
+            "place": "ナガシマスパーランド メインゲート",
+            "num": 11,
+            "thumb": "comicgirls.jpg"
+        },
+        {
+            "title": "こみっくがーるず",
+            "lat": "35.0302094",
+            "lng": "136.727796",
+            "place": "ナガシマスパーランド",
+            "num": 1,
+            "thumb": "comicgirls.jpg"
+        },
+        {
+            "title": "こみっくがーるず",
+            "lat": "35.031118",
+            "lng": "136.732032",
+            "place": "ナガシマスパーランド お化け屋敷前",
+            "num": 1,
+            "thumb": "comicgirls.jpg"
+        },
+        {
+            "title": "こみっくがーるず",
+            "lat": "35.030925",
+            "lng": "136.732372",
+            "place": "ナガシマスパーランド 園内１",
+            "num": 2,
+            "thumb": "comicgirls.jpg"
+        },
+        {
+            "title": "こみっくがーるず",
+            "lat": "35.032186",
+            "lng": "136.732985",
+            "place": "ナガシマスパーランド 園内２",
+            "num": 1,
+            "thumb": "comicgirls.jpg"
+        },
+        {
+            "title": "こみっくがーるず",
+            "lat": "35.032814",
+            "lng": "136.7348835",
+            "place": "ナガシマスパーランド スチールドラゴン2000",
+            "num": 6,
+            "thumb": "comicgirls.jpg"
+        },
+        {
+            "title": "こみっくがーるず",
+            "lat": "35.028457",
+            "lng": "136.730800",
+            "place": "ナガシマスパーランド キャラクターショップ横広場",
+            "num": 5,
+            "thumb": "comicgirls.jpg"
+        },
+        {
+            "title": "こみっくがーるず",
+            "lat": "35.028284",
+            "lng": "136.730339",
+            "place": "ナガシマスパーランド キャラクターショップ裏",
+            "num": 8,
+            "thumb": "comicgirls.jpg"
+        },
+        {
+            "title": "こみっくがーるず",
+            "lat": "35.0298581",
+            "lng": "136.7332429",
+            "place": "ナガシマスパーランド 大観覧車オーロラ",
+            "num": 13,
+            "thumb": "comicgirls.jpg"
+        },
+        {
+            "title": "こみっくがーるず",
+            "lat": "35.2847074",
+            "lng": "139.6927166",
+            "place": "猿島海水浴場",
+            "num": 51,
+            "thumb": "comicgirls.jpg"
+        },
+        {
+            "title": "こみっくがーるず",
+            "lat": "35.2847074",
+            "lng": "139.6927166",
+            "place": "猿島レンタルショップ",
+            "num": 18,
+            "thumb": "comicgirls.jpg"
+        },
+        {
+            "title": "こみっくがーるず",
+            "lat": "35.7053391",
+            "lng": "139.6158062",
+            "place": "酒道 ハナクラ しぞ～かおでん 荻窪店",
+            "num": 28,
+            "thumb": "comicgirls.jpg"
+        },
+        {
+            "title": "こみっくがーるず",
+            "lat": "35.6816044",
+            "lng": "139.7676073",
+            "place": "東京駅 21番線ホーム 10号車乗り場",
+            "num": 9,
+            "thumb": "comicgirls.jpg"
+        },
+        {
+            "title": "こみっくがーるず",
+            "lat": "37.0469669",
+            "lng": "140.2276551",
+            "place": "白河の関 バス停",
+            "num": 6,
             "thumb": "comicgirls.jpg"
         }
     ],
