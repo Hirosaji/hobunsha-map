@@ -66,7 +66,7 @@
           );
 
       var baseMaps = {
-        "汎用地図": osm,
+        "汎用地図（OpenStreetMap）": osm,
         // "MIERUNE_basic": MIERUNE_basic,
         "モノトーン（MIERUNE）": MIERUNE_mono,
         // "Basic": basic,
