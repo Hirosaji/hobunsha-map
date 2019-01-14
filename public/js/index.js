@@ -268,6 +268,7 @@
           // Pagination
           pagination: {
             el: '.swiper-pagination',
+            type: 'progressbar',
           },
 
           // Navigation arrows
