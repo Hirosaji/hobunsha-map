@@ -259,6 +259,13 @@
 
         animeDetailWindowWrap.html(swiperHtml);
 
+        // remove extra swiper option
+        if(imgNum === 1) {
+          d3.select('.swiper-pagination').remove();
+          d3.select('.swiper-button-prev').remove();
+          d3.select('.swiper-button-next').remove();
+        }
+
         // Swiper event parameters
         new Swiper('.swiper-container', {
           // Optional parameters
