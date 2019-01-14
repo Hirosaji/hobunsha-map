@@ -58,20 +58,20 @@
           satellite = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/satellite-v9/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiaGlyb3NhamkiLCJhIjoiY2phYW1qM2lyMHRzcTMybzd1dzhlaG83NCJ9.2QcsoUxneas4TQFI3F-DyQ',
             {id: 'satellite', attribution: '© Mapbox contributors'}),
           MIERUNE_basic = L.tileLayer('https://tile.mierune.co.jp/mierune/{z}/{x}/{y}.png',
-            {id: 'light', attribution: "Maptiles by <a href='http://mierune.co.jp/' target='_blank'>MIERUNE</a>, under CC BY. Data by <a href='http://osm.org/copyright' target='_blank'>OpenStreetMap</a> contributors, under ODbL."}),
+            {id: 'mierune_basic', attribution: "Maptiles by <a href='http://mierune.co.jp/' target='_blank'>MIERUNE</a>, under CC BY. Data by <a href='http://osm.org/copyright' target='_blank'>OpenStreetMap</a> contributors, under ODbL."}),
           MIERUNE_mono = L.tileLayer('https://tile.mierune.co.jp/mierune_mono/{z}/{x}/{y}.png',
-            {id: 'light', attribution: "Maptiles by <a href='http://mierune.co.jp/' target='_blank'>MIERUNE</a>, under CC BY. Data by <a href='http://osm.org/copyright' target='_blank'>OpenStreetMap</a> contributors, under ODbL."}),
+            {id: 'mierune_mono', attribution: "Maptiles by <a href='http://mierune.co.jp/' target='_blank'>MIERUNE</a>, under CC BY. Data by <a href='http://osm.org/copyright' target='_blank'>OpenStreetMap</a> contributors, under ODbL."}),
           osm = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
             {id: 'osm', attribution: '© OpenStreetMap contributors'}
           );
 
       var baseMaps = {
-        "Basic": basic,
-        "Light": light,
-        "Satellite": satellite,
-        "MIERUNE_basic": MIERUNE_basic,
-        "MIERUNE_mono": MIERUNE_mono,
-        "OpenStreetMap": osm,
+        "汎用地図": osm,
+        // "MIERUNE_basic": MIERUNE_basic,
+        "モノトーン（MIERUNE）": MIERUNE_mono,
+        // "Basic": basic,
+        // "Light": light,
+        "衛星写真（Mapbox）": satellite,
       };
 
       // The map
