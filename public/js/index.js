@@ -76,7 +76,7 @@
 
       // The map
       var map = L.map('map', {
-        layers: [MIERUNE_mono],
+        layers: [osm],
         center: center,
         zoom: 5
       });
