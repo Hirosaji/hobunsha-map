@@ -10,7 +10,6 @@
 
 function gaSend(category, label){
     var data = {
-        hitType: 'event',
         event_category: category,
         event_label: label
     };
