@@ -199,7 +199,7 @@
                 selectTitle = d3.select(this).nodes()[0].options.animeTitle;
                 imgNum = d3.select(this).nodes()[0].options.imgNum;
                 updateAnimeDetailWindow(clickedPlace, selectTitle);
-                gaSend("click_marker_tracking", "clickMarker: " + selectTitle + " - " + clickedPlace);  // send ga
+                gaSend("click_marker_tracking", "clickMarker", selectTitle + " - " + clickedPlace);  // send ga
               });
               assetLayerGroup.addLayer(marker);
             })
@@ -340,7 +340,7 @@
           d3.select(".leaflet-top.leaflet-right").html("");
           L.control.layers(baseMaps).addTo(map);
 
-          gaSend("click_title_tracking", "changeSlide: " + selectTitle);  // send ga
+          gaSend("click_title_tracking", "changeSlide", selectTitle);  // send ga
         } else {
           firstLoad = false;
         }
