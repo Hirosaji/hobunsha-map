@@ -101,6 +101,7 @@
       // Switch layer event
       switchLayerToggle.on("change", function() {
         var selectLayerName = d3.select(this.parentNode).select("span").html().replace(" ", "");
+        gaSend("click_radio_tracking", "changeMapType", selectTitle);  // send ga
 
         // Update map components (when "pin" -> "paint")
         if (selectMapStyle === "paint") {
@@ -148,6 +149,8 @@
           map.removeLayer(prevCityGrid);
           map.removeLayer(prevPrefGrid);
         }
+
+        gaSend("click_toggle_tracking", "switchToggle", selectTitle);  // send ga
       });
 
       /******************
