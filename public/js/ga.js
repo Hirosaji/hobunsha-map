@@ -1,12 +1,10 @@
-!(function(){
-	"use strict";
+"use strict";
 
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
 
-    gtag('config', 'UA-92245361-5');
-}());
+gtag('config', 'UA-92245361-5');
 
 function gaSend(category, label){
     var data = {
