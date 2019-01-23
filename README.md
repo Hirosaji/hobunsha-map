@@ -22,3 +22,8 @@ You can run code on your local machine by:
 ```
 npm run server
 ```
+
+### License
+MIT
+
+Copyright (c) 2019 Hirosaji
