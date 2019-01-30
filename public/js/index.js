@@ -13,7 +13,7 @@
       var center = [36, 137.6];
       var selectTitle = "ひだまりスケッチ";
       var selectMapStyle = "pin";
-    
+
       /**********
         Map
       **********/
@@ -39,7 +39,7 @@
         indexMaxPoints: 100000,
         type: "pref"
       };
-  
+
       // Devide GeoJSON data into canvas tiles
       var cityTileIndex = geojsonvt(cityGeoJSON, cityTileOptions);
       var prefTileIndex = geojsonvt(prefGeoJSON, prefTileOptions);
@@ -82,16 +82,16 @@
       });
 
       map.zoomControl.setPosition("bottomleft");  // zoom position
-  
+
       L.control.layers(baseMaps).addTo(map);
-  
+
       var assetLayerGroup = new L.LayerGroup();
-  
+
       var animeDetailWindow = d3.select(".anime-detail-window");
       var animeDetailWindowTitle = d3.select(".anime-detail-window__title");
       var animeDetailWindowWrap = d3.select(".anime-detail-window__wrap");
       var animeDetailWindowButton = d3.select(".anime-detail-window__button");
-  
+
       var buttonIcon = d3.select(".button__icon");
       var buttonIconClose = d3.select(".button--close.anime-detail-window__button");
 
@@ -175,12 +175,12 @@
         var prefSelector = d3.select("#canvasElement02").node().parentNode;
         d3.select(prefSelector.parentNode).style("z-index", 200);
       }
-  
+
       var imgNum = 0;
       var imgOrder = 0;
 
       function setMarkers() {
-          
+
         assetLayerGroup.clearLayers();
 
         if (selectTitle === "全作品") var targets = animeList.map(a => a.title);
@@ -188,7 +188,7 @@
 
         targets.forEach(target => {
           if(JSON[target][0].place) {
-          
+
             JSON[target].forEach(d => {
               var marker = L.marker([d.lat, d.lng], {
                 place: d.place,
@@ -206,7 +206,7 @@
               });
               assetLayerGroup.addLayer(marker);
             })
-            
+
             map.addLayer(assetLayerGroup);
           }
         })
@@ -225,9 +225,9 @@
           d3.select(this).attr('src', _markerSrc + '_red.png');
         });
       }
-  
+
       var clickedOnWindow = false;
-  
+
       function updateAnimeDetailWindow(place, title) {
         // Detect click on detail-window
         animeDetailWindowButton.on("click", function(){ clickedOnWindow = true; });
@@ -247,9 +247,10 @@
         var imgHtml = '';
         for (var i = 0; i < imgNum; i++) {
           var activeClass = (i === 0) ? ' swiper-img__active' : '';
-          imgHtml = imgHtml + 
+          var imgSrc = encodeURI('img/scene/' + title + '/' + place + '/' + place + '-' + i + '.jpg')
+          imgHtml = imgHtml +
             '<div class="swiper-slide"> \
-              <img class="swiper-img' + activeClass + '" id="img' + i + '" src="img/scene/' + title + '/' + place + '/' + place + '-' + i + '.jpg"> \
+              <img class="swiper-img' + activeClass + '" id="img' + i + '" src="' + imgSrc + '"> \
             </div>';
         }
         var swiperHtml = '<div class="anime-detail-window__img"> \
@@ -295,7 +296,7 @@
         });
 
       };
-      
+
       // button--close event
       buttonIcon.on("mouseover", function(){ buttonIconClose.classed("__touchstart", true); });
       buttonIcon.on("mouseout", function(){ buttonIconClose.classed("__touchstart", false); });
