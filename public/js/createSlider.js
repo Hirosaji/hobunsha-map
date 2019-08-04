@@ -9,6 +9,8 @@ function createSlider() {
 
   var _dispatch = d3.dispatch("edgeClick", "slideClick", "slideChange");
 
+  var ok_webp = d3.select("html").classed("webp");
+
   function instance(_selection) {
     _selection.on = function() {
       return this.on.apply(_dispatch, arguments);
@@ -84,7 +86,10 @@ function createSlider() {
       .append("img")
       .attr("class", function(d){ if(d.noData) return "__no-data"; })
       .classed("slider-slide clickable", true)
-      .attr("src", function(d){ return "img/key_visual/" + d.thumb; });
+      .attr("src", function(d){ 
+        if(ok_webp) return "img/key_visual/webp/" + d.thumb + ".webp";
+        else return "img/key_visual/" + d.thumb;
+      });
 
     selectSlide
       .merge(enterSlide)
