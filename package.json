@@ -29,6 +29,10 @@
     "tar": ">=4.4.2"
   },
   "dependencies": {
-    "browser-sync": "^2.26.3"
+    "browser-sync": "^2.26.3",
+    "lodash": ">=4.17.13",
+    "lodash.mergewith": ">=4.6.2",
+    "fstream": ">=1.0.12",
+    "axios": ">=0.18.1"
   }
 }
