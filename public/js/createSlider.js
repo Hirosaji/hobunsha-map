@@ -86,7 +86,7 @@ function createSlider() {
       .append("img")
       .attr("class", function(d){ if(d.noData) return "__no-data"; })
       .classed("slider-slide clickable", true)
-      .attr("src", function(d){ 
+      .attr("src", function(d){
         if(ok_webp) return "img/key_visual/webp/" + d.thumb + ".webp";
         else return "img/key_visual/" + d.thumb;
       });
