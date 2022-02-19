@@ -26,7 +26,7 @@
   "devDependencies": {
     "gulp": "^4.0.0",
     "gulp-sass": "^4.0.2",
-    "tar": ">=4.4.2"
+    "tar": ">=4.4.18"
   },
   "dependencies": {
     "browser-sync": "^2.26.3",
